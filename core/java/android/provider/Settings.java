@@ -5291,13 +5291,18 @@ public final class Settings {
          */
         public static final String SCREEN_OFF_ANIMATION = "screen_off_animation";
 
-
         /**
          * Setting to hold the current set overlay for color bucket.
          *    overlay package name (String)
          * @hide
          */
         public static final String COLOR_BUCKET_OVERLAY = "color_bucket_overlay";
+
+        /**
+         * Whether to display roaming indicator for roaming signal connection
+         * @hide
+         */
+        public static final String ROAMING_INDICATOR_ICON = "roaming_indicator_icon";
 
         /**
          * Keys we no longer back up under the current schema, but want to continue to
