@@ -103,4 +103,8 @@
     <!-- Screenshot QS tile -->
     <string name="quick_settings_screenshot_label">Screenshot</string>
     <string name="quick_settings_region_screenshot_label">Partial screenshot</string>
+
+    <!-- Name of the volte/vowifi status bar icon. -->
+    <string name="status_bar_ims">VoLTE/VoWiFi</string>
+
 </resources>
