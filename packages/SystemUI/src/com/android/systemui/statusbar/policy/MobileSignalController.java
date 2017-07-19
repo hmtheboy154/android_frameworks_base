@@ -109,9 +109,12 @@ public class MobileSignalController extends SignalController<
             "system:" + Settings.System.SHOW_VOLTE_ICON;
 
     private boolean mRoamingIconAllowed;
+    private boolean mShow4gForLte;
 
     private static final String ROAMING_INDICATOR_ICON =
             "system:" + Settings.System.ROAMING_INDICATOR_ICON;
+    private static final String SHOW_FOURG_ICON =
+            "system:" + Settings.System.SHOW_FOURG_ICON;
 
     // TODO: Reduce number of vars passed in, if we have the NetworkController, probably don't
     // need listener lists anymore.
@@ -176,6 +179,7 @@ public class MobileSignalController extends SignalController<
 
         Dependency.get(TunerService.class).addTunable(this, SHOW_VOLTE_ICON);
         Dependency.get(TunerService.class).addTunable(this, ROAMING_INDICATOR_ICON);
+        Dependency.get(TunerService.class).addTunable(this, SHOW_FOURG_ICON);
     }
 
     @Override
@@ -190,6 +194,11 @@ public class MobileSignalController extends SignalController<
                 mRoamingIconAllowed =
                     TunerService.parseIntegerSwitch(newValue, true);
                 updateTelephony();
+                break;
+            case SHOW_FOURG_ICON:
+                mShow4gForLte =
+                    TunerService.parseIntegerSwitch(newValue, false);
+                mapIconSets();
                 break;
             default:
                 break;
@@ -323,7 +332,7 @@ public class MobileSignalController extends SignalController<
         mNetworkToIconLookup.put(toIconKey(TelephonyManager.NETWORK_TYPE_HSPA), hGroup);
         mNetworkToIconLookup.put(toIconKey(TelephonyManager.NETWORK_TYPE_HSPAP), hPlusGroup);
 
-        if (mConfig.show4gForLte) {
+        if (mShow4gForLte) {
             mNetworkToIconLookup.put(toIconKey(
                     TelephonyManager.NETWORK_TYPE_LTE),
                     TelephonyIcons.FOUR_G);
