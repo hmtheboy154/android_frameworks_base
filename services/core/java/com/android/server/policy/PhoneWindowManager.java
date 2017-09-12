@@ -91,6 +91,7 @@ import static com.android.server.wm.WindowManagerPolicyProto.WINDOW_MANAGER_DRAW
 
 import static org.lineageos.internal.util.DeviceKeysConstants.*;
 
+import android.Manifest;
 import android.annotation.Nullable;
 import android.app.ActivityManager;
 import android.app.ActivityManagerInternal;
@@ -6149,6 +6150,14 @@ public class PhoneWindowManager implements WindowManagerPolicy {
     }
 
     @Override
+    public void takeCustomScreenshot(boolean partial) {
+        mContext.enforceCallingOrSelfPermission(Manifest.permission.ACCESS_SURFACE_FLINGER,
+                TAG + "sendCustomAction permission denied");
+        mHandler.removeCallbacks(mScreenshotRunnable);
+        mScreenshotRunnable.setScreenshotType(partial ? TAKE_SCREENSHOT_SELECTED_REGION : TAKE_SCREENSHOT_FULLSCREEN);
+        mHandler.post(mScreenshotRunnable);
+    }
+
     public void setDismissImeOnBackKeyPressed(boolean newValue) {
         mDismissImeOnBackKeyPressed = newValue;
     }
