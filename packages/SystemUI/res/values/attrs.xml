@@ -161,5 +161,9 @@
         <attr name="rippleMinSize" format="dimension" />
         <attr name="rippleMaxSize" format="dimension" />
     </declare-styleable>
+
+    <declare-styleable name="BatteryBarController">
+        <attr name="viewLocation" format="integer" />
+    </declare-styleable>
 </resources>
 
