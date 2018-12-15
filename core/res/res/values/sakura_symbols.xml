@@ -65,7 +65,7 @@
   <java-symbol type="string" name="app_clipboard_access_denied" />
   <java-symbol type="string" name="app_clipboard_access_granted" />
 
-  <!-- System fonts -->
+  <!-- System fonts --> 
   <java-symbol type="array" name="config_fontPackages" />
-
+  <java-symbol type="string" name="fontservice_incompatible_font" />
 </resources>

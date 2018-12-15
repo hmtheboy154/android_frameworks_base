@@ -12,8 +12,7 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-
     <!-- toast icons -->
-￼    <color name="toast_bg">@color/white</color>
-￼    <color name="toast_text">@color/black</color>
+    <color name="toast_bg">@color/white</color>
+    <color name="toast_text">@color/black</color>
 </resources>
