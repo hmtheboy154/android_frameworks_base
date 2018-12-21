@@ -49,7 +49,7 @@ import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.android.internal.util.crdroid.OmniJawsClient;
+import com.android.internal.util.sakura.OmniJawsClient;
 import com.android.systemui.R;
 import com.android.settingslib.Utils;
 
