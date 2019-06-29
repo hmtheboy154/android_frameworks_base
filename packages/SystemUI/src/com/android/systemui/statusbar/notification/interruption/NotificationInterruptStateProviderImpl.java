@@ -83,6 +83,8 @@ public class NotificationInterruptStateProviderImpl implements NotificationInter
     @VisibleForTesting
     protected boolean mUseHeadsUp = false;
 
+    private boolean mSkipHeadsUp = false;
+
     @Inject
     public NotificationInterruptStateProviderImpl(
             Context context,
@@ -221,6 +223,13 @@ public class NotificationInterruptStateProviderImpl implements NotificationInter
             return false;
         }
 
+        if (shouldSkipHeadsUp(sbn)) {
+            if (DEBUG_HEADS_UP) {
+                Log.d(TAG, "No alerting: gaming mode");
+            }
+            return false;
+        }
+
         if (!canAlertCommon(entry)) {
             return false;
         }
@@ -327,6 +336,7 @@ public class NotificationInterruptStateProviderImpl implements NotificationInter
         mLessBoringHeadsUp = lessBoring;
     }
 
+    /**
     private boolean shouldSkipHeadsUp(StatusBarNotification sbn) {
         boolean isImportantHeadsUp = false;
         String notificationPackageName = sbn.getPackageName().toLowerCase();
@@ -334,7 +344,7 @@ public class NotificationInterruptStateProviderImpl implements NotificationInter
                 notificationPackageName.contains("messaging") ||
                 notificationPackageName.contains("clock");
         return mLessBoringHeadsUp && !isImportantHeadsUp;
-    }
+    } **/
 
     /**
      * Whether or not the notification should "pulse" on the user's display when the phone is
@@ -381,6 +391,29 @@ public class NotificationInterruptStateProviderImpl implements NotificationInter
             return false;
         }
         return true;
+    }
+
+    @Override
+    public void setGamingPeekMode(boolean skipHeadsUp) {
+        mSkipHeadsUp = skipHeadsUp;
+    }
+
+    public boolean shouldSkipHeadsUp(StatusBarNotification sbn) {
+        String notificationPackageName = sbn.getPackageName().toLowerCase();
+
+        // Gaming mode takes precedence since messaging headsup is intrusive
+        if (mSkipHeadsUp) {
+            boolean isNonInstrusive = notificationPackageName.contains("dialer") ||
+                notificationPackageName.contains("clock");
+            return !mStatusBarStateController.isDozing() && mSkipHeadsUp && !isNonInstrusive;
+        }
+
+        boolean isImportantHeadsUp = false;
+        isImportantHeadsUp = notificationPackageName.contains("dialer") ||
+                notificationPackageName.contains("messaging") ||
+                notificationPackageName.contains("clock");
+        return mLessBoringHeadsUp && !isImportantHeadsUp;
+
     }
 
     /**
