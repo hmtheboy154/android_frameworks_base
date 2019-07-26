@@ -37,7 +37,7 @@ import androidx.dynamicanimation.animation.SpringForce;
 
 import com.android.systemui.Dependency;
 import com.android.systemui.R;
-import com.android.systemui.crdroid.header.StatusBarHeaderMachine;
+import com.android.systemui.sakura.header.StatusBarHeaderMachine;
 import com.android.systemui.qs.customize.QSCustomizer;
 import com.android.systemui.tuner.TunerService;
 import com.android.systemui.util.animation.PhysicsAnimator;
@@ -91,6 +91,7 @@ public class QSContainerImpl extends FrameLayout implements
 
     private boolean mHeaderImageEnabled;
     private ImageView mBackgroundImage;
+
     private StatusBarHeaderMachine mStatusBarHeaderMachine;
     private Drawable mCurrentBackground;
     private boolean mLandscape;

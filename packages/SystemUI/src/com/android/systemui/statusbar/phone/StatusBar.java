@@ -74,6 +74,7 @@ import android.content.pm.IPackageManager;
 import android.content.pm.PackageManager;
 import android.content.pm.PackageManager.NameNotFoundException;
 import android.content.res.Configuration;
+import android.database.ContentObserver;
 import android.graphics.Point;
 import android.graphics.PointF;
 import android.hardware.display.DisplayManager;
@@ -995,8 +996,8 @@ public class StatusBar extends SystemUI implements DemoMode,
 
         createAndAddWindows(result);
 
-        mSuperiorSettingsObserver.observe();
-        mSuperiorSettingsObserver.update();
+        mSakuraSettingsObserver.observe();
+        mSakuraSettingsObserver.update();
 
         if (mWallpaperSupported) {
             // Make sure we always have the most current wallpaper info.
@@ -4127,9 +4128,9 @@ public class StatusBar extends SystemUI implements DemoMode,
         }
     };
 
-    private SuperiorSettingsObserver mSuperiorSettingsObserver = new SuperiorSettingsObserver(mHandler);
-    private class SuperiorSettingsObserver extends ContentObserver {
-        SuperiorSettingsObserver(Handler handler) {
+    private SakuraSettingsObserver mSakuraSettingsObserver = new SakuraSettingsObserver(mHandler);
+    private class SakuraSettingsObserver extends ContentObserver {
+        SakuraSettingsObserver(Handler handler) {
             super(handler);
         }
          void observe() {
