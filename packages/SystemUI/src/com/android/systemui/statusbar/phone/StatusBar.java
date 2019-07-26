@@ -734,6 +734,24 @@ public class StatusBar extends SystemUI implements DemoMode,
 
     private ActivityIntentHelper mActivityIntentHelper;
 
+    private class CustomSettingsObserver extends ContentObserver {
+        CustomSettingsObserver(Handler handler) {
+            super(handler);
+        }
+
+        void observe() {
+            mContext.getContentResolver().registerContentObserver(Settings.System.getUriFor(
+                    Settings.System.LESS_BORING_HEADS_UP),
+                    false, this, UserHandle.USER_ALL);
+        }
+
+        public void update() {
+            setUseLessBoringHeadsUp();
+        }
+    }
+
+    private CustomSettingsObserver mCustomSettingsObserver;
+
     /**
      * Public constructor for StatusBar.
      *
@@ -4139,6 +4157,15 @@ public class StatusBar extends SystemUI implements DemoMode,
     private void setHeadsUpBlacklist() {
         if (mNotificationInterruptStateProvider != null)
             mNotificationInterruptStateProvider.setHeadsUpBlacklist();
+    }
+
+
+    private void setUseLessBoringHeadsUp() {
+        boolean lessBoringHeadsUp = Settings.System.getIntForUser(mContext.getContentResolver(),
+                Settings.System.LESS_BORING_HEADS_UP, 0,
+                UserHandle.USER_CURRENT) == 1;
+        if (mNotificationInterruptStateProvider != null)
+            mNotificationInterruptStateProvider.setUseLessBoringHeadsUp(lessBoringHeadsUp);
     }
 
     public int getWakefulnessState() {
