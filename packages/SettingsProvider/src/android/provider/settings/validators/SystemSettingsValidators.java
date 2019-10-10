@@ -16,6 +16,7 @@
 
 package android.provider.settings.validators;
 
+import static android.provider.settings.validators.SettingsValidators.ANY_INTEGER_VALIDATOR;
 import static android.provider.settings.validators.SettingsValidators.BOOLEAN_VALIDATOR;
 import static android.provider.settings.validators.SettingsValidators.COMPONENT_NAME_VALIDATOR;
 import static android.provider.settings.validators.SettingsValidators.DATE_FORMAT_VALIDATOR;
@@ -212,5 +213,8 @@ public class SystemSettingsValidators {
         VALIDATORS.put(System.ACCELEROMETER_ROTATION_ANGLES, NON_NEGATIVE_INTEGER_VALIDATOR);
         VALIDATORS.put(System.THEMING_SETTINGS_DASHBOARD_ICONS, ANY_INTEGER_VALIDATOR);
         VALIDATORS.put(System.DOZE_ON_CHARGE, BOOLEAN_VALIDATOR);
+        VALIDATORS.put(System.PULSE_AMBIENT_LIGHT, BOOLEAN_VALIDATOR);
+        VALIDATORS.put(System.AMBIENT_NOTIFICATION_LIGHT_ENABLED, BOOLEAN_VALIDATOR);
+        VALIDATORS.put(System.AMBIENT_NOTIFICATION_LIGHT, BOOLEAN_VALIDATOR);
     }
 }
