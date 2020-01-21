@@ -69,4 +69,8 @@
     <string name="status_bar_location">Location</string>
     <!-- Name of the microphone status bar icon. -->
     <string name="status_bar_microphone">Microphone</string>
+
+    <!-- Daily data usage -->
+    <string name="daily_data_usage_title">Today\'s usage</string>
+
 </resources>
