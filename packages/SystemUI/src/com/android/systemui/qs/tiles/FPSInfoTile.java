@@ -1,6 +1,5 @@
 /*
- * Copyright (C) 2017-2018 Benzo Rom
- *           (C) 2017-2020 crDroidAndroid Project
+ * Copyright (C) 2017-2020 crDroidAndroid Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -32,17 +31,17 @@ import com.android.internal.logging.nano.MetricsProto.MetricsEvent;
 
 import javax.inject.Inject;
 
-/** Quick settings tile: CPUInfo overlay **/
-public class CPUInfoTile extends QSTileImpl<BooleanState> {
+/** Quick settings tile: FPSInfo overlay **/
+public class FPSInfoTile extends QSTileImpl<BooleanState> {
 
     private final SystemSetting mSetting;
-    private final Icon mIcon = ResourceIcon.get(R.drawable.ic_qs_cpuinfo);
+    private final Icon mIcon = ResourceIcon.get(R.drawable.ic_qs_fps_info);
 
     @Inject
-    public CPUInfoTile(QSHost host) {
+    public FPSInfoTile(QSHost host) {
         super(host);
 
-        mSetting = new SystemSetting(mContext, mHandler, System.SHOW_CPU_OVERLAY) {
+        mSetting = new SystemSetting(mContext, mHandler, System.SHOW_FPS_OVERLAY) {
             @Override
             protected void handleValueChanged(int value, boolean observedChange) {
                 handleRefreshState(value);
@@ -67,7 +66,7 @@ public class CPUInfoTile extends QSTileImpl<BooleanState> {
     protected void toggleState() {
         Intent service = (new Intent())
                 .setClassName("com.android.systemui",
-                "com.android.systemui.CPUInfoService");
+                "com.android.systemui.FPSInfoService");
         if (mSetting.getValue() == 0) {
             mContext.stopService(service);
         } else {
@@ -84,13 +83,13 @@ public class CPUInfoTile extends QSTileImpl<BooleanState> {
     protected void handleUpdateState(BooleanState state, Object arg) {
         if (mSetting == null) return;
         final int value = arg instanceof Integer ? (Integer)arg : mSetting.getValue();
-        final boolean cpuInfoEnabled = value != 0;
-        state.value = cpuInfoEnabled;
-        state.label = mContext.getString(R.string.quick_settings_cpuinfo_label);
+        final boolean fpsInfoEnabled = value != 0;
+        state.value = fpsInfoEnabled;
+        state.label = mContext.getString(R.string.quick_settings_fpsinfo_label);
         state.icon = mIcon;
         state.contentDescription =  mContext.getString(
-                R.string.quick_settings_cpuinfo_label);
-        if (cpuInfoEnabled) {
+                R.string.quick_settings_fpsinfo_label);
+        if (fpsInfoEnabled) {
             state.state = Tile.STATE_ACTIVE;
         } else {
             state.state = Tile.STATE_INACTIVE;
@@ -99,12 +98,12 @@ public class CPUInfoTile extends QSTileImpl<BooleanState> {
 
     @Override
     public CharSequence getTileLabel() {
-        return mContext.getString(R.string.quick_settings_cpuinfo_label);
+        return mContext.getString(R.string.quick_settings_fpsinfo_label);
     }
 
     @Override
     protected String composeChangeAnnouncement() {
-        return mContext.getString(R.string.quick_settings_cpuinfo_label);
+        return mContext.getString(R.string.quick_settings_fpsinfo_label);
     }
 
     @Override
