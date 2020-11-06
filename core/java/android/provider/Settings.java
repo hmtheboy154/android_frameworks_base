@@ -4985,6 +4985,12 @@ public final class Settings {
         public static final String LOCKSCREEN_POWERMENU_SECURE = "lockscreen_powermenu_secure";
 
         /**
+         * Settings dashboard icon style
+         * @hide
+         */
+        public static final String THEMING_SETTINGS_DASHBOARD_ICONS = "theming_settings_dashboard_icons";
+
+        /**
          * Whether to show the battery info on the lockscreen while charging
          * @hide
          */
@@ -5112,6 +5118,7 @@ public final class Settings {
             PRIVATE_SETTINGS.add(HEADS_UP_STOPLIST_VALUES);
             PRIVATE_SETTINGS.add(HEADS_UP_BLACKLIST_VALUES);
             PRIVATE_SETTINGS.add(LESS_BORING_HEADS_UP);
+            PRIVATE_SETTINGS.add(THEMING_SETTINGS_DASHBOARD_ICONS);
         }
 
         /**
