@@ -5321,6 +5321,9 @@ public final class Settings {
          */
         public static final String USE_OLD_MOBILETYPE = "use_old_mobiletype";
 
+        /** @hide */
+        public static final String BACK_GESTURE_HEIGHT = "back_gesture_height";
+
         /**
          * Keys we no longer back up under the current schema, but want to continue to
          * process when restoring historical backup datasets.
