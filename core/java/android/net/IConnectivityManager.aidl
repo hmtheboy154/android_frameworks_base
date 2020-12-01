@@ -234,7 +234,4 @@ interface IConnectivityManager
 
     void simulateDataStall(int detectionMethod, long timestampMillis, in Network network,
                 in PersistableBundle extras);
-
-    // Lineage custom API
-    VpnProfile[] getAllLegacyVpns();
 }
