@@ -85,5 +85,6 @@ public class SystemSettings {
         Settings.System.ALARM_ALERT,
         Settings.System.NOTIFICATION_LIGHT_PULSE,
         Settings.System.THEMING_SETTINGS_DASHBOARD_ICONS,
+        Settings.System.DOZE_ON_CHARGE,
     };
 }
