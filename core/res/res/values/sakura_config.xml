@@ -46,4 +46,8 @@
 
     <!-- Whether to show a custom view for FOD -->
     <bool name="config_needCustomFODView">false</bool>
+
+    <!-- Smart cutoff -->
+    <integer name="config_smartCutoffTemperature">30</integer>
+    <integer name="config_smartCutoffResumeTemperature">25</integer>
 </resources>

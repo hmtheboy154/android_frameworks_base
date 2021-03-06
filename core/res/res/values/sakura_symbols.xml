@@ -56,4 +56,8 @@
 
   <!-- Whether to show a custom view for FOD -->
   <java-symbol type="bool" name="config_needCustomFODView" />
+
+  <!-- Smart cutoff temperature -->
+  <java-symbol type="integer" name="config_smartCutoffTemperature" />
+  <java-symbol type="integer" name="config_smartCutoffResumeTemperature" />
 </resources>
