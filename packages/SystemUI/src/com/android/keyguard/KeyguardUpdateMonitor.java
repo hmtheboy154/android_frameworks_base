@@ -288,7 +288,6 @@ public class KeyguardUpdateMonitor implements TrustManager.TrustListener, Dumpab
     private final Executor mBackgroundExecutor;
 
     private final boolean mFingerprintWakeAndUnlock;
-    private final boolean mFaceAuthOnlyOnSecurityView;
 
     /**
      * Short delay before restarting fingerprint authentication after a successful try. This should
@@ -302,8 +301,6 @@ public class KeyguardUpdateMonitor implements TrustManager.TrustListener, Dumpab
     private int mHardwareFaceUnavailableRetryCount = 0;
     private static final int HAL_ERROR_RETRY_TIMEOUT = 500; // ms
     private static final int HAL_ERROR_RETRY_MAX = 10;
-
-    private boolean mKeyguardReset = false;
 
     private final Runnable mCancelNotReceived = new Runnable() {
         @Override
@@ -1583,8 +1580,6 @@ public class KeyguardUpdateMonitor implements TrustManager.TrustListener, Dumpab
         mRingerModeTracker = ringerModeTracker;
         mStatusBarStateController = statusBarStateController;
         mLockPatternUtils = lockPatternUtils;
-        mFaceAuthOnlyOnSecurityView = mContext.getResources().getBoolean(
-                com.android.systemui.R.bool.config_faceAuthOnlyOnSecurityView);
         dumpManager.registerDumpable(getClass().getName(), this);
 
         mHandler = new Handler(mainLooper) {
@@ -1976,13 +1971,9 @@ public class KeyguardUpdateMonitor implements TrustManager.TrustListener, Dumpab
      * If face auth is allows to scan on this exact moment.
      */
     public boolean shouldListenForFace() {
-        if (mFaceAuthOnlyOnSecurityView && mKeyguardReset){
-            mKeyguardReset = false;
-            return false;
-        }
         final boolean statusBarShadeLocked =
                 mStatusBarStateController.getState() == StatusBarState.SHADE_LOCKED;
-        boolean awakeKeyguard = mKeyguardIsVisible && mDeviceInteractive && !mGoingToSleep
+        final boolean awakeKeyguard = mKeyguardIsVisible && mDeviceInteractive && !mGoingToSleep
                 && !statusBarShadeLocked;
         final int user = getCurrentUser();
         final int strongAuth = mStrongAuthTracker.getStrongAuthForUser(user);
@@ -2005,11 +1996,6 @@ public class KeyguardUpdateMonitor implements TrustManager.TrustListener, Dumpab
         boolean strongAuthAllowsScanning = (!isEncryptedOrTimedOut || canBypass && !mBouncer)
                 && !isLockDown;
 
-        boolean unlockPossible = true;
-        if ((!mBouncer || !awakeKeyguard) && mFaceAuthOnlyOnSecurityView){
-            unlockPossible = false;
-        }
-
         // Only listen if this KeyguardUpdateMonitor belongs to the primary user. There is an
         // instance of KeyguardUpdateMonitor for each user but KeyguardUpdateMonitor is user-aware.
         final boolean shouldListen =
@@ -2018,9 +2004,7 @@ public class KeyguardUpdateMonitor implements TrustManager.TrustListener, Dumpab
                 && !mSwitchingUser && !isFaceDisabled(user) && becauseCannotSkipBouncer
                 && !mKeyguardGoingAway && mFaceSettingEnabledForUser.get(user) && !mLockIconPressed
                 && strongAuthAllowsScanning && mIsPrimaryUser
-                && !mSecureCameraLaunched
-                && unlockPossible;
-
+                && !mSecureCameraLaunched;
         // Aggregate relevant fields for debug logging.
         if (DEBUG_FACE || DEBUG_SPEW) {
             final KeyguardFaceListenModel model = new KeyguardFaceListenModel(
@@ -2527,9 +2511,6 @@ public class KeyguardUpdateMonitor implements TrustManager.TrustListener, Dumpab
         if (DEBUG) Log.d(TAG, "handleKeyguardReset");
         updateBiometricListeningState();
         mNeedsSlowUnlockTransition = resolveNeedsSlowUnlockTransition();
-        if (mFaceAuthOnlyOnSecurityView){
-            mKeyguardReset = true;
-        }
     }
 
     private boolean resolveNeedsSlowUnlockTransition() {
