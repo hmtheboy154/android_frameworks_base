@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2020 Project Sakura
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+          http://www.apache.org/licenses/LICENSE-2.0
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- Always on Display tile -->
+    <string name="quick_settings_always_on_display_label">Màn hình luôn bật</string>
+    <!-- DataSwitch Tile -->
+    <string name="qs_data_switch_label">Chuyển SIM dữ liệu</string>
+    <string name="qs_data_switch_changed_1">Sử dụng SIM 1 cho dữ liệu di động</string>
+    <string name="qs_data_switch_changed_2">Sử dụng SIM 2 cho dữ liệu di động</string>
+    <!-- Indication on the keyguard that is shown when the device is charging with a dash charger. Should match keyguard_plugged_in_dash_charging [CHAR LIMIT=40]-->
+    <string name="keyguard_indication_dash_charging_time"><xliff:g id="percentage">%2$s</xliff:g> • Đang sạc nhanh (<xliff:g id="charging_time_left" example="4 hours and 2 minutes">%1$s</xliff:g> nữa sẽ đầy)</string>
+    <string name="keyguard_plugged_in_dash_charging"><xliff:g id="PERCENTAGE">%s</xliff:g> • Đang sạc nhanh</string>
+    <!-- Indication on the keyguard that is shown when the device is charging with a warp charger. Should match keyguard_plugged_in_warp_charging [CHAR LIMIT=40]-->
+    <string name="keyguard_indication_warp_charging_time"><xliff:g id="percentage">%2$s</xliff:g> • Đang sạc nhanh (<xliff:g id="charging_time_left" example="4 hours and 2 minutes">%1$s</xliff:g> nữa sẽ đầy)</string>
+    <string name="keyguard_plugged_in_warp_charging"><xliff:g id="Percentage">%s</xliff:g> • Sạc thần tốc</string>
+    <!-- Indication on the keyguard that is shown when the device is charging with a VOOC charger. Should match keyguard_plugged_in_vooc_charging [CHAR LIMIT=40]-->
+    <string name="keyguard_indication_vooc_charging_time"><xliff:g id="percentage">%2$s</xliff:g> • Sạc nhanh VOOC (<xliff:g id="charging_time_left" example="4 giờ và 2 phút">%1$s</xliff:g> nữa sẽ đầy)</string>
+    <string name="keyguard_plugged_in_vooc_charging"><xliff:g id="Percentage">%s</xliff:g> • Sạc nhanh VOOC</string>
+    <!-- CPUInfo tile -->
+    <string name="quick_settings_cpuinfo_label">Thông tin CPU</string>
+    <!-- FPS Info tile -->
+    <string name="quick_settings_fpsinfo_label">Thông tin FPS</string>
+    <!-- Gaming mode -->
+    <string name="gaming_mode_not_enabled">Chế độ trò chơi đang tắt trong cài đặt</string>
+    <string name="quick_settings_gaming_mode_label">Chế độ trò chơi</string>
+    <!-- Spidey Analog clock -->
+    <!-- Spectrum Analog clock -->
+    <!-- Dot Analog clock -->
+    <!-- Sneeky Analog clock -->
+    <!-- aod states -->
+    <string name="quick_settings_aod_on_charge_label">AOD khi sạc</string>
+    <string name="quick_settings_aod_off_label">Tắt AOD</string>
+    <string name="quick_settings_aod_off_powersave_label">Màn hình luôn bật tắt\nTiết kiệm pin</string>
+    <!--Themes-->
+    <string name="system_theme_style_dark">Google Tối</string>
+    <string name="system_theme_style_pitchblack">Đen sâu</string>
+    <string name="system_theme_style_solarizeddark">Tối mặt trời</string>
+    <!-- Scrolling Screenshot string -->
+    <string name="scrollss">Cuộn</string>
+    <!-- Name of the camera status bar icon. -->
+    <string name="status_bar_camera">Máy ảnh</string>
+    <!-- Name of the location status bar icon. -->
+    <string name="status_bar_location">Vị trí</string>
+    <!-- Name of the microphone status bar icon. -->
+    <string name="status_bar_microphone">Micro</string>
+    <!-- Daily data usage -->
+    <string name="daily_data_usage_title">Sử dụng hôm nay</string>
+    <!-- Omnijaws Weather -->
+    <string name="omnijaws_service_error">Lỗi</string>
+    <string name="omnijaws_service_unkown">Không có dữ liệu thời tiết</string>
+    <string name="omnijaws_service_error_long">Lỗi tải dữ liệu thời tiết</string>
+    <string name="omnijaws_service_disabled">Dịch vụ bị vô hiệu hóa</string>
+    <string name="omnijaws_detail_header">Thời tiết</string>
+    <string name="omnijaws_label_default">Thời tiết</string>
+    <string name="omnijaws_current_text">Hiện tại</string>
+    <string name="omnijaws_package_not_available">OmniJaws không có sẵn</string>
+    <string name="omnijaws_service_last_update">Lần cập nhật cuối:</string>
+    <!-- Biometric Dialog - Use Face -->
+    <string name="biometric_dialog_button_use_face">Sử dụng khuôn mặt</string>
+    <!-- App Lock -->
+    <string name="applock_locked">&#160;đã khóa</string>
+    <string name="applock_fingerprint_face">, sử dụng vân tay hoặc mặt của bạn để mở khoá</string>
+    <string name="applock_face">&#160;hoặc sử dụng khuôn mặt để mở khóa</string>
+    <string name="applock_fingerprint">&#160;hoặc vân tay của bạn để mở khoá</string>
+    <string name="applock_credential">&#160;để mở khóa</string>
+    <string name="applock_unlock">Mở khóa</string>
+</resources>

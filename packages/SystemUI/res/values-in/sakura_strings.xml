@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2020 Project Sakura
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+          http://www.apache.org/licenses/LICENSE-2.0
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- Always on Display tile -->
+    <string name="quick_settings_always_on_display_label">Layar selalu aktif</string>
+    <!-- DataSwitch Tile -->
+    <string name="qs_data_switch_label">Ganti kartu data seluler</string>
+    <string name="qs_data_switch_changed_1">Gunakan SIM 1 untuk Data Seluler</string>
+    <string name="qs_data_switch_changed_2">Gunakan SIM 2 untuk Data Seluler</string>
+    <!-- Indication on the keyguard that is shown when the device is charging with a dash charger. Should match keyguard_plugged_in_dash_charging [CHAR LIMIT=40]-->
+    <string name="keyguard_indication_dash_charging_time"><xliff:g id="percentage">%2$s</xliff:g> • Pengisian Daya Cepat (<xliff:g id="charging_time_left" example="4 jam 2 menit">%1$s</xliff:g> hingga penuh)</string>
+    <string name="keyguard_plugged_in_dash_charging"><xliff:g id="percentage">%s</xliff:g> • Pengisian Daya Cepat</string>
+    <!-- Indication on the keyguard that is shown when the device is charging with a warp charger. Should match keyguard_plugged_in_warp_charging [CHAR LIMIT=40]-->
+    <string name="keyguard_indication_warp_charging_time"><xliff:g id="percentage">%2$s</xliff:g> • Pengisian Daya Cepat (<xliff:g id="charging_time_left" example="4 jam 2 menit">%1$s</xliff:g> hingga penuh)</string>
+    <string name="keyguard_plugged_in_warp_charging"><xliff:g id="percentage">%s</xliff:g> • Pengisian Daya Cepat</string>
+    <!-- Indication on the keyguard that is shown when the device is charging with a VOOC charger. Should match keyguard_plugged_in_vooc_charging [CHAR LIMIT=40]-->
+    <string name="keyguard_indication_vooc_charging_time"><xliff:g id="percentage">%2$s</xliff:g> • Pengisian VOOC (<xliff:g id="charging_time_left" example="4 jam 2 menit">%1$s</xliff:g> hingga penuh)</string>
+    <string name="keyguard_plugged_in_vooc_charging"><xliff:g id="percentage">%s</xliff:g> • Pengisian VOOC</string>
+    <!-- CPUInfo tile -->
+    <string name="quick_settings_cpuinfo_label">Info CPU</string>
+    <!-- FPS Info tile -->
+    <string name="quick_settings_fpsinfo_label">Info FPS</string>
+    <!-- Gaming mode -->
+    <string name="gaming_mode_not_enabled">Mode Permainan dimatikan di pengaturan</string>
+    <string name="quick_settings_gaming_mode_label">Mode Permainan</string>
+    <!-- Spidey Analog clock -->
+    <!-- Spectrum Analog clock -->
+    <!-- Dot Analog clock -->
+    <!-- Sneeky Analog clock -->
+    <!-- aod states -->
+    <string name="quick_settings_aod_on_charge_label">AOD saat pengisian daya</string>
+    <string name="quick_settings_aod_off_label">AOD mati</string>
+    <string name="quick_settings_aod_off_powersave_label">AOD nonaktif\nPenghemat baterai</string>
+    <!--Themes-->
+    <string name="system_theme_style_dark">Mode gelap google</string>
+    <string name="system_theme_style_pitchblack">Gelap gulita</string>
+    <string name="system_theme_style_solarizeddark">Gelap Sebagian</string>
+    <!-- Scrolling Screenshot string -->
+    <string name="scrollss">Gulir</string>
+    <!-- Name of the camera status bar icon. -->
+    <string name="status_bar_camera">Kamera</string>
+    <!-- Name of the location status bar icon. -->
+    <string name="status_bar_location">Lokasi</string>
+    <!-- Name of the microphone status bar icon. -->
+    <string name="status_bar_microphone">Mikrofon</string>
+    <!-- Daily data usage -->
+    <string name="daily_data_usage_title">Penggunaan hari ini</string>
+    <!-- Omnijaws Weather -->
+    <string name="omnijaws_service_error">Terjadi kesalahan</string>
+    <string name="omnijaws_service_unkown">Tidak ada data cuaca</string>
+    <string name="omnijaws_service_error_long">Kesalahan saat memuat data cuaca</string>
+    <string name="omnijaws_service_disabled">Layanan dinonaktifkan</string>
+    <string name="omnijaws_detail_header">Cuaca</string>
+    <string name="omnijaws_label_default">Cuaca</string>
+    <string name="omnijaws_current_text">Sekarang</string>
+    <string name="omnijaws_package_not_available">OmniJaws tidak tersedia</string>
+    <string name="omnijaws_service_last_update">Pembaharuan Terakhir:</string>
+    <!-- Biometric Dialog - Use Face -->
+    <string name="biometric_dialog_button_use_face">Gunakan Wajah</string>
+    <!-- App Lock -->
+    <string name="applock_locked">Terkunci</string>
+    <string name="applock_fingerprint_face">Sidik jari atau pengenalan wajah untuk membuka</string>
+    <string name="applock_face">Atau wajah anda untuk membuka</string>
+    <string name="applock_fingerprint">Atau sidik jari anda untuk membuka</string>
+    <string name="applock_credential">Untuk membuka</string>
+    <string name="applock_unlock">Buka kunci</string>
+</resources>

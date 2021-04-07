@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2020 Project Sakura
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+          http://www.apache.org/licenses/LICENSE-2.0
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- Always on Display tile -->
+    <string name="quick_settings_always_on_display_label">Aktywny wyświetlacz</string>
+    <!-- DataSwitch Tile -->
+    <string name="qs_data_switch_label">Zmień kartę do obsługi danych</string>
+    <string name="qs_data_switch_changed_1">Karta SIM 1 jest używana do obsługi danych komórkowych</string>
+    <string name="qs_data_switch_changed_2">Karta SIM 2 jest używana do obsługi danych komórkowych</string>
+    <!-- Indication on the keyguard that is shown when the device is charging with a dash charger. Should match keyguard_plugged_in_dash_charging [CHAR LIMIT=40]-->
+    <string name="keyguard_indication_dash_charging_time">&lt;xliff:g id="percentage"&gt;%2$s&lt;/xliff:g&gt; • Szybkie ładowanie (&lt;xliff:g id="charging_time_left" Na przykład="4 godziny i 2 minuty"&gt;%1$s&lt;/xliff:g&gt; do pełnego naładowania)</string>
+    <string name="keyguard_plugged_in_dash_charging"><xliff:g id="Percentage">%s</xliff:g> • Szybkie ładowanie</string>
+    <!-- Indication on the keyguard that is shown when the device is charging with a warp charger. Should match keyguard_plugged_in_warp_charging [CHAR LIMIT=40]-->
+    <string name="keyguard_indication_warp_charging_time">&lt;xliff:g id="percentage"&gt;%2$s&lt;/xliff:g&gt; • Szybkie ładowanie Warp (&lt;xliff:g id="charging_time_left" Na przykład="4 godziny i 2 minuty"&gt;%1$s&lt;/xliff:g&gt; do pełnego naładowania)</string>
+    <string name="keyguard_plugged_in_warp_charging"><xliff:g id="Percentage">%s</xliff:g> • Szybkie ładowanie Warp</string>
+    <!-- Indication on the keyguard that is shown when the device is charging with a VOOC charger. Should match keyguard_plugged_in_vooc_charging [CHAR LIMIT=40]-->
+    <string name="keyguard_indication_vooc_charging_time"><xliff:g id="percentage">%2$s</xliff:g> • Ładowanie VOOC (<xliff:g id="charging_time_left" example="4 hours and 2 minutes">%1$s</xliff:g> do pełnego naładowania)</string>
+    <string name="keyguard_plugged_in_vooc_charging"><xliff:g id="Percentage">%s</xliff:g> • Ładowanie VOOC</string>
+    <!-- CPUInfo tile -->
+    <string name="quick_settings_cpuinfo_label">Informacje o CPU</string>
+    <!-- FPS Info tile -->
+    <string name="quick_settings_fpsinfo_label">Wskaźnik FPS</string>
+    <!-- Gaming mode -->
+    <string name="gaming_mode_not_enabled">Tryb grania jest wyłączony w ustawieniach</string>
+    <string name="quick_settings_gaming_mode_label">Tryb grania</string>
+    <!-- Spidey Analog clock -->
+    <!-- Spectrum Analog clock -->
+    <!-- Dot Analog clock -->
+    <!-- Sneeky Analog clock -->
+    <!-- aod states -->
+    <string name="quick_settings_aod_on_charge_label">AOD przy ładowaniu</string>
+    <string name="quick_settings_aod_off_label">AOD wyłączony</string>
+    <string name="quick_settings_aod_off_powersave_label">AOD wyłączony\nOszczędzanie baterii</string>
+    <!--Themes-->
+    <string name="system_theme_style_dark">Ciemny Google</string>
+    <string name="system_theme_style_pitchblack">Głęboka czerń</string>
+    <string name="system_theme_style_solarizeddark">Ciemny Solarized</string>
+    <!-- Scrolling Screenshot string -->
+    <string name="scrollss">Przewiń</string>
+    <!-- Name of the camera status bar icon. -->
+    <string name="status_bar_camera">Kamera</string>
+    <!-- Name of the location status bar icon. -->
+    <string name="status_bar_location">Lokalizacja</string>
+    <!-- Name of the microphone status bar icon. -->
+    <string name="status_bar_microphone">Mikrofon</string>
+    <!-- Daily data usage -->
+    <string name="daily_data_usage_title">Dzisiejsze użycie</string>
+    <!-- Omnijaws Weather -->
+    <string name="omnijaws_service_error">Błąd</string>
+    <string name="omnijaws_service_unkown">Brak danych o pogodzie</string>
+    <string name="omnijaws_service_error_long">Błąd ładowania danych o pogodzie</string>
+    <string name="omnijaws_service_disabled">Usługa wyłączona</string>
+    <string name="omnijaws_detail_header">Pogoda</string>
+    <string name="omnijaws_label_default">Pogoda</string>
+    <string name="omnijaws_current_text">Teraz</string>
+    <string name="omnijaws_package_not_available">OmniJaws nie jest dostępny</string>
+    <string name="omnijaws_service_last_update">Ostania aktualizacja:</string>
+    <!-- Biometric Dialog - Use Face -->
+    <string name="biometric_dialog_button_use_face">Użyj twarzy</string>
+    <!-- App Lock -->
+    <string name="applock_locked">&#160;jest zablokowana</string>
+    <string name="applock_fingerprint_face">, odcisk palca lub Twoją twarz, by odblokować</string>
+    <string name="applock_face">&#160;lub Twoją twarz, by odblokować</string>
+    <string name="applock_fingerprint">&#160;lub Twój odcisk palca, by odblokować</string>
+    <string name="applock_credential">&#160;aby odblokować</string>
+    <string name="applock_unlock">Odblokuj</string>
+</resources>

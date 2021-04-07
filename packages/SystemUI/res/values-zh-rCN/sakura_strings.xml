@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2020 Project Sakura
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+          http://www.apache.org/licenses/LICENSE-2.0
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- Always on Display tile -->
+    <string name="quick_settings_always_on_display_label">息屏显示</string>
+    <!-- DataSwitch Tile -->
+    <string name="qs_data_switch_label">切换数据流量卡</string>
+    <string name="qs_data_switch_changed_1">将SIM卡1用于移动数据</string>
+    <string name="qs_data_switch_changed_2">将SIM卡2用于移动数据</string>
+    <!-- Indication on the keyguard that is shown when the device is charging with a dash charger. Should match keyguard_plugged_in_dash_charging [CHAR LIMIT=40]-->
+    <string name="keyguard_indication_dash_charging_time"><xliff:g id="percentage">%2$s</xliff:g> • Dash闪充中 (预计<xliff:g id="charging_time_left" >%1$s</xliff:g> 后充满)</string>
+    <string name="keyguard_plugged_in_dash_charging"><xliff:g id="percentage">%s</xliff:g> • Dash闪充</string>
+    <!-- Indication on the keyguard that is shown when the device is charging with a warp charger. Should match keyguard_plugged_in_warp_charging [CHAR LIMIT=40]-->
+    <string name="keyguard_indication_warp_charging_time"><xliff:g id="percentage">%2$s</xliff:g> • Warp闪充中 (预计<xliff:g id="charging_time_left" >%1$s</xliff:g> 后充满)</string>
+    <string name="keyguard_plugged_in_warp_charging"><xliff:g id="percentage">%s</xliff:g> • Warp闪充</string>
+    <!-- Indication on the keyguard that is shown when the device is charging with a VOOC charger. Should match keyguard_plugged_in_vooc_charging [CHAR LIMIT=40]-->
+    <string name="keyguard_indication_vooc_charging_time">&lt;xliff:g id="percentage"&gt;%2$s&lt;/xliff:g&gt; • VOOC闪充中 (预计&lt;xliff:g id="charging_time_left" 后&gt;%1$s&lt;/xliff:g&gt; 充满)</string>
+    <string name="keyguard_plugged_in_vooc_charging"><xliff:g id="percentage">%s</xliff:g> • VOOC闪充</string>
+    <!-- CPUInfo tile -->
+    <string name="quick_settings_cpuinfo_label">CPU信息</string>
+    <!-- FPS Info tile -->
+    <string name="quick_settings_fpsinfo_label">FPS信息</string>
+    <!-- Gaming mode -->
+    <string name="gaming_mode_not_enabled">游戏模式已在设置中禁用</string>
+    <string name="quick_settings_gaming_mode_label">游戏模式</string>
+    <!-- Spidey Analog clock -->
+    <!-- Spectrum Analog clock -->
+    <!-- Dot Analog clock -->
+    <!-- Sneeky Analog clock -->
+    <!-- aod states -->
+    <string name="quick_settings_aod_on_charge_label">在充电时显示息屏显示</string>
+    <string name="quick_settings_aod_off_label">息屏显示已关闭</string>
+    <string name="quick_settings_aod_off_powersave_label">关闭息屏显示\n节省电量</string>
+    <!--Themes-->
+    <string name="system_theme_style_dark">Google暗黑色系</string>
+    <string name="system_theme_style_pitchblack">星际传奇</string>
+    <string name="system_theme_style_solarizeddark">Solarized式黑色</string>
+    <!-- Scrolling Screenshot string -->
+    <string name="scrollss">滚动截屏</string>
+    <!-- Name of the camera status bar icon. -->
+    <string name="status_bar_camera">相机</string>
+    <!-- Name of the location status bar icon. -->
+    <string name="status_bar_location">位置</string>
+    <!-- Name of the microphone status bar icon. -->
+    <string name="status_bar_microphone">麦克风</string>
+    <!-- Daily data usage -->
+    <string name="daily_data_usage_title">今日使用量</string>
+    <!-- Omnijaws Weather -->
+    <string name="omnijaws_service_error">出错</string>
+    <string name="omnijaws_service_unkown">没有天气数据</string>
+    <string name="omnijaws_service_error_long">加载天气数据时出错</string>
+    <string name="omnijaws_service_disabled">服务已禁用</string>
+    <string name="omnijaws_detail_header">天气</string>
+    <string name="omnijaws_label_default">天气</string>
+    <string name="omnijaws_current_text">现在</string>
+    <string name="omnijaws_package_not_available">OmniJaws不可用</string>
+    <string name="omnijaws_service_last_update">上次更新：</string>
+    <!-- Biometric Dialog - Use Face -->
+    <string name="biometric_dialog_button_use_face">使用面部</string>
+    <!-- App Lock -->
+    <string name="applock_locked">&#160;已被锁定</string>
+    <string name="applock_fingerprint_face">，指纹或者您的面部来解锁</string>
+    <string name="applock_face">&#160;或您的面部来解锁</string>
+    <string name="applock_fingerprint">&#160;或您的指纹来解锁</string>
+    <string name="applock_credential">&#160;来解锁</string>
+    <string name="applock_unlock">已解锁​​​​</string>
+</resources>

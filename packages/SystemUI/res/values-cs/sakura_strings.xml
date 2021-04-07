@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2020 Project Sakura
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+          http://www.apache.org/licenses/LICENSE-2.0
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- Always on Display tile -->
+    <string name="quick_settings_always_on_display_label">Stále zapnutí displej</string>
+    <!-- DataSwitch Tile -->
+    <string name="qs_data_switch_label">Přepnout SIM pro data</string>
+    <string name="qs_data_switch_changed_1">Používá se SIM 1 pro mobilní data</string>
+    <string name="qs_data_switch_changed_2">Používá se SIM 2 pro mobilní data</string>
+    <!-- Indication on the keyguard that is shown when the device is charging with a dash charger. Should match keyguard_plugged_in_dash_charging [CHAR LIMIT=40]-->
+    <string name="keyguard_indication_dash_charging_time"><xliff:g id="percentage">%2$s</xliff:g> • Rychlé nabíjení (Zbývá <xliff:g id="charging_time_left" example="4 hours and 2 minutes">%1$s</xliff:g> do plného nabití)</string>
+    <string name="keyguard_plugged_in_dash_charging"><xliff:g id="percentage">%s</xliff:g> • Rychlé nabíjení</string>
+    <!-- Indication on the keyguard that is shown when the device is charging with a warp charger. Should match keyguard_plugged_in_warp_charging [CHAR LIMIT=40]-->
+    <string name="keyguard_indication_warp_charging_time"><xliff:g id="percentage">%2$s</xliff:g> • Rychlé nabíjení (Zbývá <xliff:g id="charging_time_left" example="4 hours and 2 minutes">%1$s</xliff:g> do plného nabití)</string>
+    <string name="keyguard_plugged_in_warp_charging"><xliff:g id="percentage">%s</xliff:g> • Rychlé nabíjení</string>
+    <!-- Indication on the keyguard that is shown when the device is charging with a VOOC charger. Should match keyguard_plugged_in_vooc_charging [CHAR LIMIT=40]-->
+    <string name="keyguard_indication_vooc_charging_time"><xliff:g id="percentage">%2$s</xliff:g> • Rychlé nabíjení (Zbývá <xliff:g id="charging_time_left" example="4 hours and 2 minutes">%1$s</xliff:g> do plného nabití)</string>
+    <string name="keyguard_plugged_in_vooc_charging"><xliff:g id="percentage">%s</xliff:g> • Rychlé nabíjení</string>
+    <!-- CPUInfo tile -->
+    <string name="quick_settings_cpuinfo_label">CPU info</string>
+    <!-- FPS Info tile -->
+    <string name="quick_settings_fpsinfo_label">FPS info</string>
+    <!-- Gaming mode -->
+    <string name="gaming_mode_not_enabled">Herní režim je zakázán v Nastavení</string>
+    <string name="quick_settings_gaming_mode_label">Herní režim</string>
+    <!-- Spidey Analog clock -->
+    <!-- Spectrum Analog clock -->
+    <!-- Dot Analog clock -->
+    <!-- Sneeky Analog clock -->
+    <!-- aod states -->
+    <string name="quick_settings_aod_on_charge_label">AOD při nabíjení</string>
+    <string name="quick_settings_aod_off_label">AOD je vypnutý</string>
+    <string name="quick_settings_aod_off_powersave_label">AOD vypnuto/nSpořič baterie</string>
+    <!--Themes-->
+    <string name="system_theme_style_dark">Tmavý –⁠ Google</string>
+    <string name="system_theme_style_pitchblack">Úplně černý</string>
+    <string name="system_theme_style_solarizeddark">Osvětlená čená</string>
+    <!-- Scrolling Screenshot string -->
+    <string name="scrollss">Posun</string>
+    <!-- Name of the camera status bar icon. -->
+    <string name="status_bar_camera">Kamera</string>
+    <!-- Name of the location status bar icon. -->
+    <string name="status_bar_location">Poloha</string>
+    <!-- Name of the microphone status bar icon. -->
+    <string name="status_bar_microphone">Mikrofon</string>
+    <!-- Daily data usage -->
+    <string name="daily_data_usage_title">Dnešní využití</string>
+    <!-- Omnijaws Weather -->
+    <string name="omnijaws_service_error">Chyba</string>
+    <string name="omnijaws_service_unkown">Žádné údaje o počasí</string>
+    <string name="omnijaws_service_error_long">Chyba při načítání údajů o počasí</string>
+    <string name="omnijaws_service_disabled">Služba je zakázána</string>
+    <string name="omnijaws_detail_header">Počasí</string>
+    <string name="omnijaws_label_default">Počasí</string>
+    <string name="omnijaws_current_text">Nyní</string>
+    <string name="omnijaws_package_not_available">OmniJaws není k dispozici</string>
+    <string name="omnijaws_service_last_update">Poslední aktualizace:</string>
+    <!-- Biometric Dialog - Use Face -->
+    <string name="biometric_dialog_button_use_face">Použít obličej</string>
+    <!-- App Lock -->
+    <string name="applock_locked">&#160;zamčeno</string>
+    <string name="applock_fingerprint_face">, odemknout pomocí otisku prstu nebo obličeje</string>
+    <string name="applock_face">&#160;nebo odemknout obličejem</string>
+    <string name="applock_fingerprint">&#160;nebo odemknout otiskem prstu</string>
+    <string name="applock_credential">&#160;odemknout</string>
+    <string name="applock_unlock">Odemknout</string>
+</resources>
