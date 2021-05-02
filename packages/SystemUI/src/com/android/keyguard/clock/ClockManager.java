@@ -172,6 +172,7 @@ public final class ClockManager {
         addBuiltinClock(() -> new ShapeShiftClockController(res, layoutInflater, colorExtractor));
         addBuiltinClock(() -> new IDEJavaClockController(res, layoutInflater, colorExtractor));
         addBuiltinClock(() -> new TypeAltClockController(res, layoutInflater, colorExtractor));
+        addBuiltinClock(() -> new AndroidSClockController(res, layoutInflater, colorExtractor));
 
         // Store the size of the display for generation of clock preview.
         DisplayMetrics dm = res.getDisplayMetrics();

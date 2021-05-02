@@ -26,4 +26,7 @@
     <string name="salute_evening">Good evening</string>
     <string name="salute_night">Good night</string>
     <string name="salute_sleep">Go to Sleep</string>
+
+    <!-- android s clock -->
+    <string name="clock_title_android_s" translatable="false">Android S</string>
 </resources>
