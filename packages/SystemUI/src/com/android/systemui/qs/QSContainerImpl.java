@@ -166,7 +166,7 @@ public class QSContainerImpl extends FrameLayout implements
 
         setImportantForAccessibility(IMPORTANT_FOR_ACCESSIBILITY_NO);
         updateSettings();
-    }
+	}
 
     @Override
     public void onColorsChanged(ColorExtractor colorExtractor, int which) {
@@ -175,6 +175,7 @@ public class QSContainerImpl extends FrameLayout implements
         }, 1000);
     }
 	
+    private void setBackgroundBottom(int value) {
         // We're saving the bottom separately since otherwise the bottom would be overridden in
         // the layout and the animation wouldn't properly start at the old position.
         mBackgroundBottom = value;
