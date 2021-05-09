@@ -22,4 +22,7 @@
     <string name="aerr_copy">Скопіювати URL логу збою</string>
     <string name="url_copy_success">URL успішно скопійовано</string>
     <string name="url_copy_failed">Під час завантаження логу на сервіс dogbin відбулася помилка</string>
+    <!-- Clipboard access toast -->
+    <string name="app_clipboard_access_denied">%1$s відмовлено в доступі до буфера обміну</string>
+    <string name="app_clipboard_access_granted">%1$s дозволено доступ до буфера обміну</string>
 </resources>

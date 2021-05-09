@@ -76,4 +76,13 @@
     <string name="applock_fingerprint">&#160;或您的指纹来解锁</string>
     <string name="applock_credential">&#160;来解锁</string>
     <string name="applock_unlock">已解锁​​​​</string>
+    <!-- Reboot/Recovery/PowerOff QS tile -->
+    <string name="quick_settings_reboot_label">重新启动</string>
+    <string name="quick_settings_reboot_recovery_label">恢复模式</string>
+    <string name="quick_settings_poweroff_label">关机</string>
+    <!-- Screenshot QS tile -->
+    <string name="quick_settings_screenshot_label">截屏</string>
+    <string name="quick_settings_region_screenshot_label">局部截图</string>
+    <!-- Name of the volte/vowifi status bar icon. -->
+    <string name="status_bar_ims">VoLTE/VoWiFi</string>
 </resources>

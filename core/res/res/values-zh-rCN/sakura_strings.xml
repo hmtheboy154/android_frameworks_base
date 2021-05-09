@@ -22,4 +22,7 @@
     <string name="aerr_copy">复制崩溃日志链接</string>
     <string name="url_copy_success">链接复制成功</string>
     <string name="url_copy_failed">将日志上传到dogbin时发生了错误</string>
+    <!-- Clipboard access toast -->
+    <string name="app_clipboard_access_denied">已拒绝 %1$s 访问剪贴板</string>
+    <string name="app_clipboard_access_granted">已允许 %1$s 访问剪贴板</string>
 </resources>

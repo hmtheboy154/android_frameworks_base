@@ -76,4 +76,13 @@
     <string name="applock_fingerprint">&#160;или отпечаток пальца для разблокировки</string>
     <string name="applock_credential">&#160;для разблокировки</string>
     <string name="applock_unlock">Разблокировка</string>
+    <!-- Reboot/Recovery/PowerOff QS tile -->
+    <string name="quick_settings_reboot_label">Перезапустить</string>
+    <string name="quick_settings_reboot_recovery_label">Восстановление</string>
+    <string name="quick_settings_poweroff_label">Выключение</string>
+    <!-- Screenshot QS tile -->
+    <string name="quick_settings_screenshot_label">Скриншот</string>
+    <string name="quick_settings_region_screenshot_label">Скриншот выбранной области экрана</string>
+    <!-- Name of the volte/vowifi status bar icon. -->
+    <string name="status_bar_ims">VoLTE/VoWiFi</string>
 </resources>

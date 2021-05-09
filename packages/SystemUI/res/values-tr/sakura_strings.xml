@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2020 Project Sakura
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+          http://www.apache.org/licenses/LICENSE-2.0
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- Always on Display tile -->
+    <string name="quick_settings_always_on_display_label">Her zaman açık ekran</string>
+    <!-- DataSwitch Tile -->
+    <string name="qs_data_switch_label">Mobil veri kartını değiştir</string>
+    <string name="qs_data_switch_changed_1">Mobil veri için SIM 1 kullanılıyor</string>
+    <string name="qs_data_switch_changed_2">Mobil veri için SIM 2 kullanılıyor</string>
+    <!-- Indication on the keyguard that is shown when the device is charging with a dash charger. Should match keyguard_plugged_in_dash_charging [CHAR LIMIT=40]-->
+    <string name="keyguard_indication_dash_charging_time"><xliff:g id="percentage">%2$s</xliff:g> • Dash Şarj Oluyor (tam dolmasına <xliff:g id="charging_time_left" example="4 hours and 2 minutes">%1$s</xliff:g> kaldı)</string>
+    <string name="keyguard_plugged_in_dash_charging"><xliff:g id="percentage">%s</xliff:g> • Dash Şarj Oluyor</string>
+    <!-- Indication on the keyguard that is shown when the device is charging with a warp charger. Should match keyguard_plugged_in_warp_charging [CHAR LIMIT=40]-->
+    <string name="keyguard_indication_warp_charging_time"><xliff:g id="percentage">%2$s</xliff:g> • Warp Şarj Oluyor (tam dolmasına <xliff:g id="charging_time_left" example="4 hours and 2 minutes">%1$s</xliff:g> kaldı)</string>
+    <string name="keyguard_plugged_in_warp_charging"><xliff:g id="percentage">%s</xliff:g> • Warp Şarj Oluyor</string>
+    <!-- Indication on the keyguard that is shown when the device is charging with a VOOC charger. Should match keyguard_plugged_in_vooc_charging [CHAR LIMIT=40]-->
+    <string name="keyguard_indication_vooc_charging_time"><xliff:g id="percentage">%2$s</xliff:g> • VOOC Şarj Oluyor (tam dolmasına <xliff:g id="charging_time_left" example="4 hours and 2 minutes">%1$s</xliff:g> kaldı)</string>
+    <string name="keyguard_plugged_in_vooc_charging"><xliff:g id="percentage">%s</xliff:g> • VOOC Şarj Oluyor</string>
+    <!-- CPUInfo tile -->
+    <string name="quick_settings_cpuinfo_label">İşlemci bilgisi</string>
+    <!-- FPS Info tile -->
+    <string name="quick_settings_fpsinfo_label">FPS bilgisi</string>
+    <!-- Gaming mode -->
+    <string name="gaming_mode_not_enabled">Oyun modu ayarlardan devre dışı bırakıldı</string>
+    <string name="quick_settings_gaming_mode_label">Oyun modu</string>
+    <!-- Spidey Analog clock -->
+    <!-- Spectrum Analog clock -->
+    <!-- Dot Analog clock -->
+    <!-- Sneeky Analog clock -->
+    <!-- aod states -->
+    <string name="quick_settings_aod_on_charge_label">Şarj olurken AOD</string>
+    <string name="quick_settings_aod_off_label">AOD kapalı</string>
+    <string name="quick_settings_aod_off_powersave_label">AOD kapalı\nPil tasarrufu</string>
+    <!--Themes-->
+    <string name="system_theme_style_dark">Google karanlığı</string>
+    <string name="system_theme_style_pitchblack">Zifiri karanlık</string>
+    <string name="system_theme_style_solarizeddark">Solarize edilmiş karanlık</string>
+    <!-- Scrolling Screenshot string -->
+    <string name="scrollss">Kaydır</string>
+    <!-- Name of the camera status bar icon. -->
+    <string name="status_bar_camera">Kamera</string>
+    <!-- Name of the location status bar icon. -->
+    <string name="status_bar_location">Konum</string>
+    <!-- Name of the microphone status bar icon. -->
+    <string name="status_bar_microphone">Mikrofon</string>
+    <!-- Daily data usage -->
+    <string name="daily_data_usage_title">Bugünkü kullanım</string>
+    <!-- Omnijaws Weather -->
+    <string name="omnijaws_service_error">Hata</string>
+    <string name="omnijaws_service_unkown">Hava durumu verisi yok</string>
+    <string name="omnijaws_service_error_long">Hava durumu verisi yüklenirken hata oluştu</string>
+    <string name="omnijaws_service_disabled">Servis devre dışı</string>
+    <string name="omnijaws_detail_header">Hava durumu</string>
+    <string name="omnijaws_label_default">Hava durumu</string>
+    <string name="omnijaws_current_text">Şimdi</string>
+    <string name="omnijaws_package_not_available">OmniJaws mevcut değil</string>
+    <string name="omnijaws_service_last_update">Son güncelleme:</string>
+    <!-- Biometric Dialog - Use Face -->
+    <string name="biometric_dialog_button_use_face">Yüzü Kullan</string>
+    <!-- App Lock -->
+    <string name="applock_locked">&#160;kilitli</string>
+    <string name="applock_fingerprint_face">, kilidi açmak için parmak izi yada yüz kilidini kullanın</string>
+    <string name="applock_face">Kilidi açmak için &#160;veya yüz kilidini kullanın</string>
+    <string name="applock_fingerprint">Kilidi açmak için &#160;veya parmak izini kullanın</string>
+    <string name="applock_credential">Kilidi açmak için &#160;</string>
+    <string name="applock_unlock">Kilidi aç</string>
+    <!-- Reboot/Recovery/PowerOff QS tile -->
+    <string name="quick_settings_reboot_label">Yeniden başlat</string>
+    <string name="quick_settings_reboot_recovery_label">Kurtarma</string>
+    <string name="quick_settings_poweroff_label">Kapat</string>
+    <!-- Screenshot QS tile -->
+    <string name="quick_settings_screenshot_label">Ekran görüntüsü</string>
+    <string name="quick_settings_region_screenshot_label">Kısmi ekran görüntüsü</string>
+    <!-- Name of the volte/vowifi status bar icon. -->
+    <string name="status_bar_ims">VoLTE/VoWiFi</string>
+</resources>

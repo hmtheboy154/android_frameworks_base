@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2020-2021 Project Sakura
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+          http://www.apache.org/licenses/LICENSE-2.0
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- Clock required strings -->
+    <string name="custom_clock_hours_title">Hodiny</string>
+    <string name="custom_clock_minutes_title">Minuty</string>
+    <string name="custom_clock_seconds_title">Sekundy</string>
+    <string name="custom_clock_day_title">Den</string>
+    <string name="custom_clock_month_title">Měsíc</string>
+    <string name="custom_clock_year_title">Rok</string>
+    <string name="ide_java_comment">Zobrazit datum jednou, uživatel je zvědavý</string>
+    <string name="salute_fallback">Zdravíčko</string>
+    <string name="salute_morning">Dobré ráno</string>
+    <string name="salute_afternoon">Dobré odpoledne</string>
+    <string name="salute_evening">Dobrý večer</string>
+    <string name="salute_night">Dobrou noc</string>
+    <string name="salute_sleep">Jít Spát</string>
+</resources>

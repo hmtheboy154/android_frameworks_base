@@ -14,7 +14,7 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- Always on Display tile -->
-    <string name="quick_settings_always_on_display_label">Màn hình luôn bật</string>
+    <string name="quick_settings_always_on_display_label">Always on Display</string>
     <!-- DataSwitch Tile -->
     <string name="qs_data_switch_label">Chuyển SIM dữ liệu</string>
     <string name="qs_data_switch_changed_1">Sử dụng SIM 1 cho dữ liệu di động</string>
@@ -76,4 +76,13 @@
     <string name="applock_fingerprint">&#160;hoặc vân tay của bạn để mở khoá</string>
     <string name="applock_credential">&#160;để mở khóa</string>
     <string name="applock_unlock">Mở khóa</string>
+    <!-- Reboot/Recovery/PowerOff QS tile -->
+    <string name="quick_settings_reboot_label">Khởi động lại</string>
+    <string name="quick_settings_reboot_recovery_label">Chế độ Recovery</string>
+    <string name="quick_settings_poweroff_label">Tắt nguồn</string>
+    <!-- Screenshot QS tile -->
+    <string name="quick_settings_screenshot_label">Chụp màn hình</string>
+    <string name="quick_settings_region_screenshot_label">Chụp một phần màn hình</string>
+    <!-- Name of the volte/vowifi status bar icon. -->
+    <string name="status_bar_ims">VoLTE/VoWiFi</string>
 </resources>

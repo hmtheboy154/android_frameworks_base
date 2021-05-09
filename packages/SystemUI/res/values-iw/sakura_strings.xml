@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2020 Project Sakura
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+          http://www.apache.org/licenses/LICENSE-2.0
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- Always on Display tile -->
+    <string name="quick_settings_always_on_display_label">תצוגה תמידית</string>
+    <!-- DataSwitch Tile -->
+    <string name="qs_data_switch_label">החלף כרטיס נתונים</string>
+    <string name="qs_data_switch_changed_1">השתמש בכרטיס SIM 1 לנתונים ניידים</string>
+    <string name="qs_data_switch_changed_2">השתמש בכרטיס SIM 2 לנתונים ניידים</string>
+    <!-- Indication on the keyguard that is shown when the device is charging with a dash charger. Should match keyguard_plugged_in_dash_charging [CHAR LIMIT=40]-->
+    <string name="keyguard_indication_dash_charging_time"><xliff:g id="percentage">%2$s</xliff:g> • טעינה מהירה במיוחד (<xliff:g id="charging_time_left" example="4 hours and 2 minutes">%1$s</xliff:g> נשאר לסיום)</string>
+    <string name="keyguard_plugged_in_dash_charging"><xliff:g id="percentage">%s</xliff:g> • טעינה מהירה במיוחד</string>
+    <!-- Indication on the keyguard that is shown when the device is charging with a warp charger. Should match keyguard_plugged_in_warp_charging [CHAR LIMIT=40]-->
+    <string name="keyguard_indication_warp_charging_time"><xliff:g id="percentage">%2$s</xliff:g> • טעינה מהירה במיוחד (<xliff:g id="charging_time_left" example="4 hours and 2 minutes">%1$s</xliff:g> נשאר לסיום)</string>
+    <string name="keyguard_plugged_in_warp_charging"><xliff:g id="percentage">%s</xliff:g> • טעינה מהירה במיוחד</string>
+    <!-- Indication on the keyguard that is shown when the device is charging with a VOOC charger. Should match keyguard_plugged_in_vooc_charging [CHAR LIMIT=40]-->
+    <string name="keyguard_indication_vooc_charging_time"><xliff:g id="percentage">%2$s</xliff:g> • טעינה מהירה במיוחד (<xliff:g id="charging_time_left" example="4 hours and 2 minutes">%1$s</xliff:g> נשאר לסיום)</string>
+    <string name="keyguard_plugged_in_vooc_charging"><xliff:g id="percentage">%s</xliff:g> • טעינה מהירה במיוחד</string>
+    <!-- CPUInfo tile -->
+    <string name="quick_settings_cpuinfo_label">פרטי המעבד</string>
+    <!-- FPS Info tile -->
+    <string name="quick_settings_fpsinfo_label">מידע על FPS</string>
+    <!-- Gaming mode -->
+    <string name="gaming_mode_not_enabled">מצב משחק מושבת בהגדרות</string>
+    <string name="quick_settings_gaming_mode_label">מצב משחק</string>
+    <!-- Spidey Analog clock -->
+    <!-- Spectrum Analog clock -->
+    <!-- Dot Analog clock -->
+    <!-- Sneeky Analog clock -->
+    <!-- aod states -->
+    <string name="quick_settings_aod_on_charge_label">תצוגה תמידית בעת טעינה</string>
+    <string name="quick_settings_aod_off_label">תצוגה תמידית כבויה</string>
+    <string name="quick_settings_aod_off_powersave_label">תצוגה תמידית כבויה\nחיסכון בסוללה</string>
+    <!--Themes-->
+    <string name="system_theme_style_dark">ערכת נושא כהה של Google</string>
+    <string name="system_theme_style_pitchblack">חושך מוחלט</string>
+    <string name="system_theme_style_solarizeddark">חושך חצי כוח</string>
+    <!-- Scrolling Screenshot string -->
+    <string name="scrollss">גלול</string>
+    <!-- Name of the camera status bar icon. -->
+    <string name="status_bar_camera">מצלמה</string>
+    <!-- Name of the location status bar icon. -->
+    <string name="status_bar_location">מיקום</string>
+    <!-- Name of the microphone status bar icon. -->
+    <string name="status_bar_microphone">מיקרופון</string>
+    <!-- Daily data usage -->
+    <string name="daily_data_usage_title">השימוש היום</string>
+    <!-- Omnijaws Weather -->
+    <string name="omnijaws_service_error">שגיאה</string>
+    <string name="omnijaws_service_unkown">אין נתוני מזג אוויר</string>
+    <string name="omnijaws_service_error_long">שגיאה בטעינת נתוני מזג האוויר</string>
+    <string name="omnijaws_service_disabled">השירות מושבת</string>
+    <string name="omnijaws_detail_header">מזג־אוויר</string>
+    <string name="omnijaws_label_default">מזג־אוויר</string>
+    <string name="omnijaws_current_text">כעת</string>
+    <string name="omnijaws_package_not_available">OmniJaws אינו זמין</string>
+    <string name="omnijaws_service_last_update">עדכון אחרון:</string>
+    <!-- Biometric Dialog - Use Face -->
+    <string name="biometric_dialog_button_use_face">השתמש בזיהוי פנים</string>
+    <!-- App Lock -->
+    <string name="applock_locked">&#160;נעול</string>
+    <string name="applock_fingerprint_face">, טביעת האצבע או הפנים שלך לביטול הנעילה</string>
+    <string name="applock_face">&#160;או הפנים שלך כדי לבטל את הנעילה</string>
+    <string name="applock_fingerprint">&#160;או טביעת האצבע שלך כדי לבטל את הנעילה</string>
+    <string name="applock_credential">&#160;לביטול הנעילה</string>
+    <string name="applock_unlock">ביטול נעילה</string>
+    <!-- Reboot/Recovery/PowerOff QS tile -->
+    <string name="quick_settings_reboot_label">הפעלה מחדש</string>
+    <string name="quick_settings_reboot_recovery_label">מצב שחזור (Recovery)</string>
+    <string name="quick_settings_poweroff_label">כיבוי</string>
+    <!-- Screenshot QS tile -->
+    <string name="quick_settings_screenshot_label">צילום מסך</string>
+    <string name="quick_settings_region_screenshot_label">צילום מסך חלקי</string>
+    <!-- Name of the volte/vowifi status bar icon. -->
+    <string name="status_bar_ims">VoLTE/VoWiFi</string>
+</resources>

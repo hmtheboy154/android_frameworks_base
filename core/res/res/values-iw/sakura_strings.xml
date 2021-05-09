@@ -22,4 +22,7 @@
     <string name="aerr_copy">העתק את הקישור של דוח הקריסה</string>
     <string name="url_copy_success">הקישור הועתק בהצלחה</string>
     <string name="url_copy_failed">שגיאה התרחשה בעת העלאת הדוח ל־dogbin</string>
+    <!-- Clipboard access toast -->
+    <string name="app_clipboard_access_denied">%1$s נמנע מגישה ללוח</string>
+    <string name="app_clipboard_access_granted">%1$s קיבל גישה ללוח</string>
 </resources>
