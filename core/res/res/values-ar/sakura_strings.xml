@@ -19,7 +19,10 @@
     <string name="gaming_mode_enabled_toast">تم تفعيل وضع الألعاب</string>
     <string name="gaming_mode_disabled_toast">تم تعطيل وضع الألعاب</string>
     <!-- Button that copies the url to the log of a crashed application -->
-    <string name="aerr_copy">انسخ عنوان URL لسجل الانهيار</string>
+    <string name="aerr_copy">انسخ عنوان URL لسجل العطل</string>
     <string name="url_copy_success">تم نسخ ال URL بنجاح</string>
     <string name="url_copy_failed">حدث خطأ أثناء تحميل السجل إلى dogbin</string>
+    <!-- Clipboard access toast -->
+    <string name="app_clipboard_access_denied">تم رفض طلب وصول %1$s إلى الحافظة</string>
+    <string name="app_clipboard_access_granted">تم منح %1$s صلاحيات الوصول إلي الحافظة</string>
 </resources>

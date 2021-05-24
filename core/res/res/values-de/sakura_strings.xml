@@ -22,4 +22,7 @@
     <string name="aerr_copy">Kopiere Crashlog-URL</string>
     <string name="url_copy_success">URL kopiert</string>
     <string name="url_copy_failed">Fehler beim Hochladen des Logs auf dogbin</string>
+    <!-- Clipboard access toast -->
+    <string name="app_clipboard_access_denied">%1$s wurde der Zugriff auf die Zwischenablage abgelehnt</string>
+    <string name="app_clipboard_access_granted">%1$swurde der Zugriff auf die Zwischenablage gewährt</string>
 </resources>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2020-2021 Project Sakura
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+          http://www.apache.org/licenses/LICENSE-2.0
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- Clock required strings -->
+    <string name="custom_clock_hours_title">Ore</string>
+    <string name="custom_clock_minutes_title">Minute</string>
+    <string name="custom_clock_seconds_title">Secunde</string>
+    <string name="custom_clock_day_title">Zii</string>
+    <string name="custom_clock_month_title">Lună</string>
+    <string name="custom_clock_year_title">An</string>
+    <string name="ide_java_comment">Arată data pentru o dată, utilizatorul este curios</string>
+    <string name="salute_fallback">Salutare!</string>
+    <string name="salute_morning">Bună dimineața</string>
+    <string name="salute_afternoon">Bună ziua</string>
+    <string name="salute_evening">Bună seara</string>
+    <string name="salute_night">Noapte bună</string>
+    <string name="salute_sleep">Du-te la somn</string>
+</resources>

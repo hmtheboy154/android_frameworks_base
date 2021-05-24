@@ -15,7 +15,7 @@
     <!-- Gaming mode -->
     <string name="notification_channel_gaming">מצב משחק</string>
     <string name="gaming_mode_notification_title">מצב משחק פעיל</string>
-    <string name="gaming_mode_notification_content">הקש כדי לכבות את המצב המשחק</string>
+    <string name="gaming_mode_notification_content">הקש כדי לכבות את מצב המשחק</string>
     <string name="gaming_mode_enabled_toast">מצב משחק מופעל</string>
     <string name="gaming_mode_disabled_toast">מצב משחק כובה</string>
     <!-- Button that copies the url to the log of a crashed application -->

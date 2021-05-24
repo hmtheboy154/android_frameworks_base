@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2020 Project Sakura
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+          http://www.apache.org/licenses/LICENSE-2.0
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- Always on Display tile -->
+    <string name="quick_settings_always_on_display_label">Inaktivitätsdisplay</string>
+    <!-- DataSwitch Tile -->
+    <string name="qs_data_switch_label">Daten-Sim wechseln</string>
+    <string name="qs_data_switch_changed_1">SIM 1 wird für Mobile Daten verwendet</string>
+    <string name="qs_data_switch_changed_2">SIM 2 wird für mobile Daten verwendet</string>
+    <!-- Indication on the keyguard that is shown when the device is charging with a dash charger. Should match keyguard_plugged_in_dash_charging [CHAR LIMIT=40]-->
+    <string name="keyguard_indication_dash_charging_time"><xliff:g id="percentage">%2$s</xliff:g> • Schnellladen (<xliff:g id="charging_time_left" example="4 hours and 2 minutes">%1$s</xliff:g> bis es vollständig geladen ist.)</string>
+    <string name="keyguard_plugged_in_dash_charging"><xliff:g id="percentage">%s</xliff:g> • Schnellladen</string>
+    <!-- Indication on the keyguard that is shown when the device is charging with a warp charger. Should match keyguard_plugged_in_warp_charging [CHAR LIMIT=40]-->
+    <string name="keyguard_indication_warp_charging_time"><xliff:g id="percentage">%2$s</xliff:g> • sehr Schneller Ladevorgang - Warp (<xliff:g id="charging_time_left" example="4 hours and 2 minutes">%1$s</xliff:g> bis es vollständig geladen ist.)</string>
+    <string name="keyguard_plugged_in_warp_charging"><xliff:g id="percentage">%s</xliff:g> • sehr Schnelles Laden</string>
+    <!-- Indication on the keyguard that is shown when the device is charging with a VOOC charger. Should match keyguard_plugged_in_vooc_charging [CHAR LIMIT=40]-->
+    <string name="keyguard_indication_vooc_charging_time"><xliff:g id="percentage">%2$s</xliff:g> • VOOC Laden (<xliff:g id="charging_time_left" example="4 hours and 2 minutes">%1$s</xliff:g> bis es vollständig geladen ist.)</string>
+    <string name="keyguard_plugged_in_vooc_charging"><xliff:g id="percentage">%s</xliff:g> • VOOC Laden</string>
+    <!-- CPUInfo tile -->
+    <string name="quick_settings_cpuinfo_label">CPU-Info</string>
+    <!-- FPS Info tile -->
+    <string name="quick_settings_fpsinfo_label">FPS-Anzeige</string>
+    <!-- Gaming mode -->
+    <string name="gaming_mode_not_enabled">Gaming-Modus ist in den Einstellungen deaktiviert</string>
+    <string name="quick_settings_gaming_mode_label">Gaming-Modus</string>
+    <!-- Spidey Analog clock -->
+    <!-- Spectrum Analog clock -->
+    <!-- Dot Analog clock -->
+    <!-- Sneeky Analog clock -->
+    <!-- aod states -->
+    <string name="quick_settings_aod_on_charge_label">Inaktivitätsdisplay beim Aufladen</string>
+    <string name="quick_settings_aod_off_label">Inaktivitätsdisplay aus</string>
+    <string name="quick_settings_aod_off_powersave_label">Inaktivitätsdisplay aus\nEnergiesparmodus</string>
+    <!--Themes-->
+    <string name="system_theme_style_dark">Google dark</string>
+    <string name="system_theme_style_pitchblack">Pitch black</string>
+    <string name="system_theme_style_solarizeddark">Solarized dark</string>
+    <!-- Scrolling Screenshot string -->
+    <string name="scrollss">Scrollen</string>
+    <!-- Name of the camera status bar icon. -->
+    <string name="status_bar_camera">Kamera</string>
+    <!-- Name of the location status bar icon. -->
+    <string name="status_bar_location">Standort</string>
+    <!-- Name of the microphone status bar icon. -->
+    <string name="status_bar_microphone">Mikrofon</string>
+    <!-- Daily data usage -->
+    <string name="daily_data_usage_title">Heutige Nutzung</string>
+    <!-- Omnijaws Weather -->
+    <string name="omnijaws_service_error">Fehler</string>
+    <string name="omnijaws_service_unkown">Keine Wetterdaten</string>
+    <string name="omnijaws_service_error_long">Fehler beim Laden der Wetterdaten</string>
+    <string name="omnijaws_service_disabled">Dienst ist deaktiviert</string>
+    <string name="omnijaws_detail_header">Wetter</string>
+    <string name="omnijaws_label_default">Wetter</string>
+    <string name="omnijaws_current_text">Jetzt</string>
+    <string name="omnijaws_package_not_available">OmniJaws ist nicht verfügbar</string>
+    <string name="omnijaws_service_last_update">Zuletzt aktualisiert:</string>
+    <!-- Biometric Dialog - Use Face -->
+    <string name="biometric_dialog_button_use_face">Gesichtserkennung</string>
+    <!-- App Lock -->
+    <string name="applock_locked">&#160;ist gesperrt</string>
+    <string name="applock_fingerprint_face">, Fingerabdruck oder Ihr Gesicht zum Entsperren</string>
+    <string name="applock_face">&#160;oder dein Gesicht zum Entsperren</string>
+    <string name="applock_fingerprint">&#160;oder dein Fingerabdruck zum Entsperren</string>
+    <string name="applock_credential">&#160;zum Entsperren</string>
+    <string name="applock_unlock">Entsperren</string>
+    <!-- Reboot/Recovery/PowerOff QS tile -->
+    <string name="quick_settings_reboot_label">Neustarten</string>
+    <string name="quick_settings_reboot_recovery_label">Wiederherstellungsmodus</string>
+    <string name="quick_settings_poweroff_label">Ausschalten</string>
+    <!-- Screenshot QS tile -->
+    <string name="quick_settings_screenshot_label">Bildschirmfoto</string>
+    <string name="quick_settings_region_screenshot_label">Teilweiser Bildschirmfoto</string>
+    <!-- Name of the volte/vowifi status bar icon. -->
+    <string name="status_bar_ims">VoLTE/VoWiFi</string>
+</resources>
