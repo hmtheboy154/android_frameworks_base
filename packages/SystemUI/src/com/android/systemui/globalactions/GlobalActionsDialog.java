@@ -204,6 +204,8 @@ public class GlobalActionsDialog implements DialogInterface.OnDismissListener,
 
     private static final String POWER_MENU_ACTIONS_STRING =
             "lineagesecure:" + LineageSettings.Secure.POWER_MENU_ACTIONS;
+    private static final String POWER_MENU_BG_ALPHA =
+            "system:" + Settings.System.POWER_MENU_BG_ALPHA;
 
     private final Context mContext;
     private final GlobalActionsManager mWindowManagerFuncs;
@@ -225,6 +227,8 @@ public class GlobalActionsDialog implements DialogInterface.OnDismissListener,
     private final NotificationShadeDepthController mDepthController;
     private final SysUiState mSysUiState;
     private final LineageGlobalActions mLineageGlobalActions;
+
+    private int mPowerMenuBackgroundAlpha;
 
     // Used for RingerModeTracker
     private final LifecycleRegistry mLifecycle = new LifecycleRegistry(this);
@@ -450,7 +454,10 @@ public class GlobalActionsDialog implements DialogInterface.OnDismissListener,
                     }
                 });
 
-        Dependency.get(TunerService.class).addTunable(this, POWER_MENU_ACTIONS_STRING);
+
+        final TunerService tunerService = Dependency.get(TunerService.class);
+        tunerService.addTunable(this, POWER_MENU_ACTIONS_STRING);
+        tunerService.addTunable(this, POWER_MENU_BG_ALPHA);
 
         mActions = mLineageGlobalActions.getUserActionsArray();
     }
@@ -2023,6 +2030,7 @@ public class GlobalActionsDialog implements DialogInterface.OnDismissListener,
             View v = inflater.inflate(com.android.systemui.R.layout.global_actions_grid_item_v2,
                     parent, false /* attach */);
 
+            v.getBackground().setAlpha(mPowerMenuBackgroundAlpha);
             ImageView icon = v.findViewById(R.id.icon);
             TextView messageView = v.findViewById(R.id.message);
             messageView.setSelected(true); // necessary for marquee to work
@@ -2132,6 +2140,7 @@ public class GlobalActionsDialog implements DialogInterface.OnDismissListener,
             View v = inflater.inflate(com.android.systemui.R.layout.global_actions_grid_item_v2,
                     parent, false /* attach */);
 
+            v.getBackground().setAlpha(mPowerMenuBackgroundAlpha);
             ImageView icon = (ImageView) v.findViewById(R.id.icon);
             TextView messageView = (TextView) v.findViewById(R.id.message);
             final boolean enabled = isEnabled();
@@ -2362,8 +2371,18 @@ public class GlobalActionsDialog implements DialogInterface.OnDismissListener,
 
     @Override
     public void onTuningChanged(String key, String newValue) {
-        if (POWER_MENU_ACTIONS_STRING.equals(key)) {
-            mActions = mLineageGlobalActions.getUserActionsArray();
+        switch (key) {
+            case POWER_MENU_ACTIONS_STRING:
+                mActions =
+                        mLineageGlobalActions.getUserActionsArray();
+                break;
+            case POWER_MENU_BG_ALPHA:
+                mPowerMenuBackgroundAlpha =
+                        TunerService.parseInteger(newValue, 255);
+                GlobalActionsPowerDialog.mPowerMenuBackgroundAlpha = mPowerMenuBackgroundAlpha;
+                break;
+            default:
+                break;
         }
     }
 
