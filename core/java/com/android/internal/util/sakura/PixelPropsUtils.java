@@ -31,21 +31,19 @@ public class PixelPropsUtils {
 
     private static final Map<String, Object> propsToChange;
     private static final Map<String, Object> propsToChangePixel3;
+    private static final Map<String, Object> propsToChangePixelXL;
 
     private static final String[] packagesToChange = {
         "com.breel.wallpapers20",
         "com.google.android.apps.customization.pixel",
         "com.google.android.apps.fitness",
-        "com.google.android.apps.photos",
         "com.google.android.apps.recorder",
         "com.google.android.apps.subscriptions.red",
         "com.google.android.apps.tachyon",
-        "com.google.android.apps.turboadapter",
         "com.google.android.apps.wallpaper.pixel",
         "com.google.android.as",
         "com.google.android.dialer",
         "com.google.android.gms.location.history",
-        "com.google.android.inputmethod.latin",
         "com.google.android.soundpicker",
         "com.google.pixel.dynamicwallpapers",
         "com.google.pixel.livewallpaper",
@@ -62,6 +60,10 @@ public class PixelPropsUtils {
         "com.google.android.googlequicksearchbox"
     };
 
+    private static final String[] packagesToChangePixelXL = {
+            "com.google.android.apps.photos"
+    };
+
     static {
         propsToChange = new HashMap<>();
         propsToChange.put("BRAND", "google");
@@ -72,6 +74,12 @@ public class PixelPropsUtils {
         propsToChange.put("FINGERPRINT", "google/redfin/redfin:11/RQ3A.210605.005/7349499:user/release-keys");
         propsToChangePixel3 = new HashMap<>();
         propsToChangePixel3.put("MODEL", "Pixel 3 XL");
+        propsToChangePixelXL = new HashMap<>();
+        propsToChangePixelXL.put("BRAND", "google");
+        propsToChangePixelXL.put("MANUFACTURER", "Google");
+        propsToChangePixelXL.put("DEVICE", "marlin");
+        propsToChangePixelXL.put("PRODUCT", "marlin");
+        propsToChangePixelXL.put("MODEL", "Pixel XL");
     }
 
     public static void setProps(String packageName) {
@@ -101,6 +109,16 @@ public class PixelPropsUtils {
         // Set proper indexing fingerprint
         if (packageName.equals("com.google.android.settings.intelligence")) {
             setPropValue("FINGERPRINT", Build.DATE);
+        }
+        if (Arrays.asList(packagesToChangePixelXL).contains(packageName)){
+            if (DEBUG){
+                Log.d(TAG, "Defining props for: " + packageName);
+            }
+            for (Map.Entry<String, Object> prop : propsToChangePixelXL.entrySet()) {
+                String key = prop.getKey();
+                Object value = prop.getValue();
+                setPropValue(key, value);
+            }
         }
     }
 
