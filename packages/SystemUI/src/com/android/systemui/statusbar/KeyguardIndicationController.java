@@ -109,7 +109,7 @@ public class KeyguardIndicationController implements StateListener,
     private KeyguardIndicationTextView mDisclosure;
     private LottieAnimationView mChargingIndicationView;
     private final UserManager mUserManager;
-    private int mChargingIndication = 1;
+    private int mChargingIndication;
     private int mFODPositionY = 0;
     private final IBatteryStats mBatteryInfo;
     private final SettableWakeLock mWakeLock;
@@ -196,8 +196,6 @@ public class KeyguardIndicationController implements StateListener,
                 mTextView.getTextColors() : ColorStateList.valueOf(Color.WHITE);
         mDisclosure = indicationArea.findViewById(R.id.keyguard_indication_enterprise_disclosure);
         mDisclosureMaxAlpha = mDisclosure.getAlpha();
-        mChargingIndicationView = (LottieAnimationView) indicationArea.findViewById(
-                R.id.charging_indication);
         updateChargingIndication();
         if (hasActiveInDisplayFp()) {
             try {
@@ -542,72 +540,12 @@ public class KeyguardIndicationController implements StateListener,
         }
     }
 
-    public void updateChargingIndication(int style) {
-        mChargingIndication = style;
-        switch (mChargingIndication) {
-            default:
-            case 1: // Flash
-                mChargingIndicationView.setFileName("keyguard_charging_indication.json");
-                mChargingIndicationView.getLayoutParams().height = mContext.getResources().getDimensionPixelSize(
-                            R.dimen.keyguard_charging_indication_height);
-                mChargingIndicationView.getLayoutParams().width = mContext.getResources().getDimensionPixelSize(
-                            R.dimen.keyguard_charging_indication_width);
-                break;
-            case 2: // Battery
-                mChargingIndicationView.setFileName("keyguard_charge_battery.json");
-                mChargingIndicationView.getLayoutParams().height = mContext.getResources().getDimensionPixelSize(
-                            R.dimen.keyguard_charging_indication_width);
-                mChargingIndicationView.getLayoutParams().width = mContext.getResources().getDimensionPixelSize(
-                            R.dimen.keyguard_charging_indication_height);
-                break;
-            case 3: // Drop
-                mChargingIndicationView.setFileName("keyguard_charge_drop.json");
-                mChargingIndicationView.getLayoutParams().height = mContext.getResources().getDimensionPixelSize(
-                            R.dimen.keyguard_charging_indication_height);
-                mChargingIndicationView.getLayoutParams().width = mContext.getResources().getDimensionPixelSize(
-                            R.dimen.keyguard_charging_indication_height);
-                break;
-            case 4: // Explosion
-                mChargingIndicationView.setFileName("keyguard_charge_explosion.json");
-                mChargingIndicationView.getLayoutParams().height = mContext.getResources().getDimensionPixelSize(
-                            R.dimen.keyguard_charging_indication_height);
-                mChargingIndicationView.getLayoutParams().width = mContext.getResources().getDimensionPixelSize(
-                            R.dimen.keyguard_charging_indication_height);
-                break;
-            case 5: // Water
-                mChargingIndicationView.setFileName("keyguard_charge_water.json");
-                mChargingIndicationView.getLayoutParams().height = mContext.getResources().getDimensionPixelSize(
-                            R.dimen.keyguard_charging_indication_height);
-                mChargingIndicationView.getLayoutParams().width = mContext.getResources().getDimensionPixelSize(
-                            R.dimen.keyguard_charging_indication_height);
-                break;
-            case 6: // Dont know yet
-                mChargingIndicationView.setFileName("keyguard_battery_charging.json");
-                mChargingIndicationView.getLayoutParams().height = mContext.getResources().getDimensionPixelSize(
-                            R.dimen.keyguard_charging_indication_height);
-                mChargingIndicationView.getLayoutParams().width = mContext.getResources().getDimensionPixelSize(
-                            R.dimen.keyguard_charging_indication_height);
-                break;
-            case 7: // Mobile
-                mChargingIndicationView.setFileName("keyguard_charging_stack.json");
-                mChargingIndicationView.getLayoutParams().height = mContext.getResources().getDimensionPixelSize(
-                            R.dimen.keyguard_charging_indication_height);
-                mChargingIndicationView.getLayoutParams().width = mContext.getResources().getDimensionPixelSize(
-                            R.dimen.keyguard_charging_indication_height);
-                break;
-            case 8: // Stack
-                mChargingIndicationView.setFileName("keyguard_mobile_charge.json");
-                mChargingIndicationView.getLayoutParams().height = mContext.getResources().getDimensionPixelSize(
-                            R.dimen.keyguard_charging_indication_height);
-                mChargingIndicationView.getLayoutParams().width = mContext.getResources().getDimensionPixelSize(
-                            R.dimen.keyguard_charging_indication_height);
-                break;
-        }
-    }
-
     private void updateChargingIndication() {
+		final ContentResolver resolver = mContext.getContentResolver();
+        mChargingIndication = Settings.System.getIntForUser(resolver,
+                Settings.System.LOCKSCREEN_CHARGING_ANIMATION_STYLE, 1, UserHandle.USER_CURRENT);
         if (mChargingIndicationView == null) return;
-        if (mChargingIndication > 0 && mPowerPluggedIn) {
+        if (mPowerPluggedIn) {
             if (hasActiveInDisplayFp()) {
                 if (mFODPositionY != 0) {
                     // Get screen height
@@ -639,8 +577,70 @@ public class KeyguardIndicationController implements StateListener,
                     mChargingIndicationView.setLayoutParams(params);
                 }
             }
+            switch (mChargingIndication) {
+                default:
+                case 1: // Flash
+                    mChargingIndicationView.setFileName("keyguard_charging_indication.json");
+                    mChargingIndicationView.getLayoutParams().height = mContext.getResources().getDimensionPixelSize(
+                                R.dimen.keyguard_charging_indication_height);
+                    mChargingIndicationView.getLayoutParams().width = mContext.getResources().getDimensionPixelSize(
+                                R.dimen.keyguard_charging_indication_width);
+                    break;
+                case 2: // Battery
+                    mChargingIndicationView.setFileName("keyguard_charge_battery.json");
+                    mChargingIndicationView.getLayoutParams().height = mContext.getResources().getDimensionPixelSize(
+                                R.dimen.keyguard_charging_indication_width);
+                    mChargingIndicationView.getLayoutParams().width = mContext.getResources().getDimensionPixelSize(
+                                R.dimen.keyguard_charging_indication_height);
+                    break;
+                case 3: // Drop
+                    mChargingIndicationView.setFileName("keyguard_charge_drop.json");
+                    mChargingIndicationView.getLayoutParams().height = mContext.getResources().getDimensionPixelSize(
+                                R.dimen.keyguard_charging_indication_height);
+                    mChargingIndicationView.getLayoutParams().width = mContext.getResources().getDimensionPixelSize(
+                                R.dimen.keyguard_charging_indication_height);
+                    break;
+                case 4: // Explosion
+                    mChargingIndicationView.setFileName("keyguard_charge_explosion.json");
+                    mChargingIndicationView.getLayoutParams().height = mContext.getResources().getDimensionPixelSize(
+                                R.dimen.keyguard_charging_indication_height);
+                    mChargingIndicationView.getLayoutParams().width = mContext.getResources().getDimensionPixelSize(
+                                R.dimen.keyguard_charging_indication_height);
+                    break;
+                case 5: // Water
+                mChargingIndicationView.setFileName("keyguard_charge_water.json");
+                mChargingIndicationView.getLayoutParams().height = mContext.getResources().getDimensionPixelSize(
+                            R.dimen.keyguard_charging_indication_height);
+                mChargingIndicationView.getLayoutParams().width = mContext.getResources().getDimensionPixelSize(
+                            R.dimen.keyguard_charging_indication_height);
+                break;
+            case 6: // Dont know yet
+                mChargingIndicationView.setFileName("keyguard_battery_charging.json");
+                mChargingIndicationView.getLayoutParams().height = mContext.getResources().getDimensionPixelSize(
+                            R.dimen.keyguard_charging_indication_height);
+                mChargingIndicationView.getLayoutParams().width = mContext.getResources().getDimensionPixelSize(
+                            R.dimen.keyguard_charging_indication_height);
+                break;
+            case 7: // Mobile
+                mChargingIndicationView.setFileName("keyguard_charging_stack.json");
+                mChargingIndicationView.getLayoutParams().height = mContext.getResources().getDimensionPixelSize(
+                            R.dimen.keyguard_charging_indication_height);
+                mChargingIndicationView.getLayoutParams().width = mContext.getResources().getDimensionPixelSize(
+                            R.dimen.keyguard_charging_indication_height);
+                break;
+            case 8: // Stack
+                mChargingIndicationView.setFileName("keyguard_mobile_charge.json");
+                mChargingIndicationView.getLayoutParams().height = mContext.getResources().getDimensionPixelSize(
+                            R.dimen.keyguard_charging_indication_height);
+                mChargingIndicationView.getLayoutParams().width = mContext.getResources().getDimensionPixelSize(
+                            R.dimen.keyguard_charging_indication_height);
+                break;
+            }
             mChargingIndicationView.setVisibility(View.VISIBLE);
             mChargingIndicationView.playAnimation();
+            if (mChargingIndication == 0) {
+                mChargingIndicationView.setVisibility(View.GONE);
+            }
         } else {
             mChargingIndicationView.setVisibility(View.GONE);
         }
