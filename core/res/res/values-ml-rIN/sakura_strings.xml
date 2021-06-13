@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2020-2021 Project Sakura
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+          http://www.apache.org/licenses/LICENSE-2.0
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- Gaming mode -->
+    <string name="notification_channel_gaming">ഗെയിമിംഗ്  മോഡ്</string>
+    <string name="gaming_mode_notification_title">ഗെയിമിംഗ്  മോഡ്  പ്രവർത്തനക്ഷമമാക്കി</string>
+    <string name="gaming_mode_notification_content">ഗെയിമിംഗ്  മോഡ്  ഓഫുചെയ്യാൻ അമർത്തുക</string>
+    <string name="gaming_mode_enabled_toast">ഗെയിമിംഗ്  മോഡ്  ഓണായിരിക്കുന്നു</string>
+    <string name="gaming_mode_disabled_toast">ഗെയിമിംഗ്  മോഡ്  ഓഫാക്കിയിരിക്കുന്നു</string>
+    <!-- Button that copies the url to the log of a crashed application -->
+    <string name="aerr_copy">ക്രാഷ്  ലോഗ്  URL പകർത്തുക</string>
+    <string name="url_copy_success">URL വിജയകരമായി പകർതീരിക്കുന്നു</string>
+    <string name="url_copy_failed">ലോഗ്  ഡോഗ്‌ബിനിലേക്കു അപ്‌ലോഡു ചെയ്യുനിടെയെല്  ഒരു പിശക്  സംഭവിച്ചു</string>
+    <!-- Clipboard access toast -->
+    <string name="app_clipboard_access_denied">%1$sഎന്നു ക്ലിപ്പ്ബോർഡിലേക്കുള്ള ആക്സസ് നിരസിച്ചു</string>
+    <string name="app_clipboard_access_granted">%1$s ക്ലിപ്പ്ബോർഡിലേക്ക്  ആക്സസ്  അനുവദിച്ചിരിക്കുന്നു</string>
+    <!-- [CHAR LIMIT=NONE] Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
+    <string name="permlab_accessFontManager">ഫോണ്ട്  മാനേജർ ആക്സസ്  ചെയ്യുക</string>
+    <!-- [CHAR LIMIT=NONE] Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
+    <string name="permdesc_accessFontManager">ഫോണ്ട്  മാനേജറിലേക്ക്  പ്രവേശിക്കാൻ ഒരു അപ്ലിക്കേഷനെ അനുവദിക്കുന്നു.</string>
+    <!-- [CHAR LIMIT=NONE] Error when a package is installed but got the missing fonts.xml file, notifying the user why it isn't showing up. -->
+    <string name="fontservice_incompatible_font">നിങ്ങൾ ഇൻസ്റ്റാൾ ചെയ്ത ഫോണ്ട് പാക്കേജ് അനുയോജ്യമല്ല കാരണം fonts.xml ഫയലുകളിൽ കാണുന്നില്ല. പിന്തുണയ്ക്കായി പാക്കേജ്  ഡവലപ്പറുമായി ബന്ധപ്പെടുക.</string>
+</resources>

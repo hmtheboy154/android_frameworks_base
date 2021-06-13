@@ -42,10 +42,6 @@
     <string name="quick_settings_aod_on_charge_label">Şarj olurken AOD</string>
     <string name="quick_settings_aod_off_label">AOD kapalı</string>
     <string name="quick_settings_aod_off_powersave_label">AOD kapalı\nPil tasarrufu</string>
-    <!--Themes-->
-    <string name="system_theme_style_dark">Google karanlığı</string>
-    <string name="system_theme_style_pitchblack">Zifiri karanlık</string>
-    <string name="system_theme_style_solarizeddark">Solarize edilmiş karanlık</string>
     <!-- Scrolling Screenshot string -->
     <string name="scrollss">Kaydır</string>
     <!-- Name of the camera status bar icon. -->

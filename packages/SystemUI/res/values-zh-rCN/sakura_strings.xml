@@ -42,10 +42,6 @@
     <string name="quick_settings_aod_on_charge_label">在充电时显示息屏显示</string>
     <string name="quick_settings_aod_off_label">息屏显示已关闭</string>
     <string name="quick_settings_aod_off_powersave_label">关闭息屏显示\n节省电量</string>
-    <!--Themes-->
-    <string name="system_theme_style_dark">Google暗黑色系</string>
-    <string name="system_theme_style_pitchblack">星际传奇</string>
-    <string name="system_theme_style_solarizeddark">Solarized式黑色</string>
     <!-- Scrolling Screenshot string -->
     <string name="scrollss">滚动截屏</string>
     <!-- Name of the camera status bar icon. -->

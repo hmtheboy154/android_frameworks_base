@@ -25,4 +25,10 @@
     <!-- Clipboard access toast -->
     <string name="app_clipboard_access_denied">%1$s נמנע מגישה ללוח</string>
     <string name="app_clipboard_access_granted">%1$s קיבל גישה ללוח</string>
+    <!-- [CHAR LIMIT=NONE] Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
+    <string name="permlab_accessFontManager">גישה למנהל הגופנים</string>
+    <!-- [CHAR LIMIT=NONE] Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
+    <string name="permdesc_accessFontManager">אפשר לאפליקציה לגשת אל מנהל הגופנים.</string>
+    <!-- [CHAR LIMIT=NONE] Error when a package is installed but got the missing fonts.xml file, notifying the user why it isn't showing up. -->
+    <string name="fontservice_incompatible_font">חבילת הגופנים שהתקנת אינה תואמת עקב חוסר הקובץ fonts.xml בקבציה. פנה למפתח החבילה לקבלת תמיכה.</string>
 </resources>

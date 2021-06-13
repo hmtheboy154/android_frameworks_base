@@ -42,10 +42,6 @@
     <string name="quick_settings_aod_on_charge_label">AOD la încărcare</string>
     <string name="quick_settings_aod_off_label">AOD oprit</string>
     <string name="quick_settings_aod_off_powersave_label">AOD oprit\nEconomisire baterie</string>
-    <!--Themes-->
-    <string name="system_theme_style_dark">Google întunecat</string>
-    <string name="system_theme_style_pitchblack">Negru complet</string>
-    <string name="system_theme_style_solarizeddark">Negru solarizat</string>
     <!-- Scrolling Screenshot string -->
     <string name="scrollss">Derulare</string>
     <!-- Name of the camera status bar icon. -->

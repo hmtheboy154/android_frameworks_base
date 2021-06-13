@@ -42,10 +42,6 @@
     <string name="quick_settings_aod_on_charge_label">AOD Em quanto carregar</string>
     <string name="quick_settings_aod_off_label">AOD desligado</string>
     <string name="quick_settings_aod_off_powersave_label">AOD desligado\Economia de bateria</string>
-    <!--Themes-->
-    <string name="system_theme_style_dark">Google Dark</string>
-    <string name="system_theme_style_pitchblack">Pitch black</string>
-    <string name="system_theme_style_solarizeddark">Solarized Dark</string>
     <!-- Scrolling Screenshot string -->
     <string name="scrollss">Rolagem</string>
     <!-- Name of the camera status bar icon. -->

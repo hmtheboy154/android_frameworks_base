@@ -42,10 +42,6 @@
     <string name="quick_settings_aod_on_charge_label">充電時の AOD</string>
     <string name="quick_settings_aod_off_label">AOD OFF</string>
     <string name="quick_settings_aod_off_powersave_label">AOD OFF\nバッテリー節約</string>
-    <!--Themes-->
-    <string name="system_theme_style_dark">Google ダーク</string>
-    <string name="system_theme_style_pitchblack">PitchBlack</string>
-    <string name="system_theme_style_solarizeddark">Solarized ダーク</string>
     <!-- Scrolling Screenshot string -->
     <string name="scrollss">スクロール</string>
     <!-- Name of the camera status bar icon. -->

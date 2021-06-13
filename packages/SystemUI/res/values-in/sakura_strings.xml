@@ -42,10 +42,6 @@
     <string name="quick_settings_aod_on_charge_label">AOD saat cas</string>
     <string name="quick_settings_aod_off_label">AOD mati</string>
     <string name="quick_settings_aod_off_powersave_label">AOD nonaktif\nPenghemat baterai</string>
-    <!--Themes-->
-    <string name="system_theme_style_dark">Mode gelap google</string>
-    <string name="system_theme_style_pitchblack">Gelap gulita</string>
-    <string name="system_theme_style_solarizeddark">Gelap Sebagian</string>
     <!-- Scrolling Screenshot string -->
     <string name="scrollss">Gulir</string>
     <!-- Name of the camera status bar icon. -->

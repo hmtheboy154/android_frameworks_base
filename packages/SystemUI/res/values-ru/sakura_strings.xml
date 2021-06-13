@@ -42,10 +42,6 @@
     <string name="quick_settings_aod_on_charge_label">AOD при зарядке</string>
     <string name="quick_settings_aod_off_label">AOD выключен</string>
     <string name="quick_settings_aod_off_powersave_label">AOD выключен\nЭкономия энергии</string>
-    <!--Themes-->
-    <string name="system_theme_style_dark">Тёмный Google</string>
-    <string name="system_theme_style_pitchblack">PitchBlack</string>
-    <string name="system_theme_style_solarizeddark">Морская</string>
     <!-- Scrolling Screenshot string -->
     <string name="scrollss">Прокрутка</string>
     <!-- Name of the camera status bar icon. -->

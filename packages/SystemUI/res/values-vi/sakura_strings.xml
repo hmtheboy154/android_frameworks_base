@@ -42,10 +42,6 @@
     <string name="quick_settings_aod_on_charge_label">AOD khi sạc</string>
     <string name="quick_settings_aod_off_label">Tắt AOD</string>
     <string name="quick_settings_aod_off_powersave_label">Màn hình luôn bật tắt\nTiết kiệm pin</string>
-    <!--Themes-->
-    <string name="system_theme_style_dark">Google Tối</string>
-    <string name="system_theme_style_pitchblack">Đen sâu</string>
-    <string name="system_theme_style_solarizeddark">Tối mặt trời</string>
     <!-- Scrolling Screenshot string -->
     <string name="scrollss">Cuộn</string>
     <!-- Name of the camera status bar icon. -->

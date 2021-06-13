@@ -25,4 +25,10 @@
     <!-- Clipboard access toast -->
     <string name="app_clipboard_access_denied">%1$s wurde der Zugriff auf die Zwischenablage abgelehnt</string>
     <string name="app_clipboard_access_granted">%1$swurde der Zugriff auf die Zwischenablage gewährt</string>
+    <!-- [CHAR LIMIT=NONE] Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
+    <string name="permlab_accessFontManager">Zugriff auf Schriftarten-Manager</string>
+    <!-- [CHAR LIMIT=NONE] Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
+    <string name="permdesc_accessFontManager">Erlaubt einer App den Zugriff auf den Schriftarten-Manager.</string>
+    <!-- [CHAR LIMIT=NONE] Error when a package is installed but got the missing fonts.xml file, notifying the user why it isn't showing up. -->
+    <string name="fontservice_incompatible_font">Das Schriftpaket, welches du installiert hast, ist aufgrund der fehlender fonts.xml Dateien nicht kompatibel. Bitte kontaktiere den Entwickler des Schriftpakets.</string>
 </resources>

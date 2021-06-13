@@ -25,4 +25,10 @@
     <!-- Clipboard access toast -->
     <string name="app_clipboard_access_denied">%1$s ditolak akses ke clipboard</string>
     <string name="app_clipboard_access_granted">%1$s diberi akses ke clipboard</string>
+    <!-- [CHAR LIMIT=NONE] Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
+    <string name="permlab_accessFontManager">akses pengelola font</string>
+    <!-- [CHAR LIMIT=NONE] Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
+    <string name="permdesc_accessFontManager">Izinkan aplikasi untuk mengakses pengelola font.</string>
+    <!-- [CHAR LIMIT=NONE] Error when a package is installed but got the missing fonts.xml file, notifying the user why it isn't showing up. -->
+    <string name="fontservice_incompatible_font">Paket font yang Anda pasang tidak kompatibel dikarenakan hilangnya fonts.xml dalam berkasnya. Harap hubungi pengembang berkas font untuk dukungan.</string>
 </resources>

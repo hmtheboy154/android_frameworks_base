@@ -25,4 +25,10 @@
     <!-- Clipboard access toast -->
     <string name="app_clipboard_access_denied">%1$s отказано в доступе к буферу обмена</string>
     <string name="app_clipboard_access_granted">%1$s предоставлен доступ к буферу обмена</string>
+    <!-- [CHAR LIMIT=NONE] Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
+    <string name="permlab_accessFontManager">доступ к менеджеру шрифтов</string>
+    <!-- [CHAR LIMIT=NONE] Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
+    <string name="permdesc_accessFontManager">Разрешает приложению получить доступ к менеджеру шрифтов.</string>
+    <!-- [CHAR LIMIT=NONE] Error when a package is installed but got the missing fonts.xml file, notifying the user why it isn't showing up. -->
+    <string name="fontservice_incompatible_font">Набор шрифтов, который вы установили, несовместим из-за отсутствия файла fonts.xml. Пожалуйста, обратитесь к разработчику набора для получения поддержки.</string>
 </resources>
