@@ -23,6 +23,7 @@ import android.animation.AnimatorListenerAdapter;
 import android.animation.ValueAnimator;
 import android.app.admin.DevicePolicyManager;
 import android.content.BroadcastReceiver;
+import android.content.ContentResolver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
@@ -435,6 +436,16 @@ public class KeyguardIndicationController implements StateListener,
 		// Walk down a precedence-ordered list of what indication
             // should be shown based on user or device state
             if (mDozing) {
+			int userId = KeyguardUpdateMonitor.getCurrentUser();
+            String trustGrantedIndication = getTrustGrantedIndication();
+            String trustManagedIndication = getTrustManagedIndication();
+
+            String powerIndication = null;
+            if (mPowerPluggedIn || mEnableBatteryDefender) {
+                powerIndication = computePowerIndication();
+            }
+
+            boolean isError = false;
             // When dozing we ignore any text color and use white instead, because
             // colors can be hard to read in low brightness.
             mTextView.setTextColor(Color.WHITE);
@@ -540,7 +551,7 @@ public class KeyguardIndicationController implements StateListener,
         }
     }
 
-    private void updateChargingIndication() {
+    public void updateChargingIndication() {
 		final ContentResolver resolver = mContext.getContentResolver();
         mChargingIndication = Settings.System.getIntForUser(resolver,
                 Settings.System.LOCKSCREEN_CHARGING_ANIMATION_STYLE, 1, UserHandle.USER_CURRENT);
