@@ -127,10 +127,8 @@ import java.util.function.Consumer;
 import javax.inject.Inject;
 import javax.inject.Singleton;
 
-import com.android.internal.util.custom.faceunlock.FaceUnlockUtils;
 import com.android.internal.util.cherish.FodUtils;
 
-/**
  * Watches for updates that may be interesting to the keyguard, and provides
  * the up to date information as well as a registration for callbacks that care
  * to be updated.
@@ -293,9 +291,6 @@ public class KeyguardUpdateMonitor implements TrustManager.TrustListener, Dumpab
     private int mActiveMobileDataSubscription = SubscriptionManager.INVALID_SUBSCRIPTION_ID;
     private final Executor mBackgroundExecutor;
 
-    // Face unlock
-    private static final boolean mCustomFaceUnlockSupported = FaceUnlockUtils.isFaceUnlockSupported();
-	
     /**
      * Short delay before restarting fingerprint authentication after a successful try. This should
      * be slightly longer than the time between onFingerprintAuthenticated and
@@ -1015,15 +1010,6 @@ public class KeyguardUpdateMonitor implements TrustManager.TrustListener, Dumpab
     private boolean isFaceDisabled(int userId) {
         final DevicePolicyManager dpm =
                 (DevicePolicyManager) mContext.getSystemService(Context.DEVICE_POLICY_SERVICE);
-        if (mCustomFaceUnlockSupported && dpm != null) {
-            try {
-                if (dpm.getPasswordQuality(null, userId) > 32768) {
-                    return true;
-                }
-            } catch (SecurityException e) {
-                Log.e("KeyguardUpdateMonitor", "isFaceDisabled error:", e);
-            }
-        }
         // TODO(b/140035044)
         return dpm != null && (dpm.getKeyguardDisabledFeatures(null, userId)
                 & DevicePolicyManager.KEYGUARD_DISABLE_FACE) != 0
