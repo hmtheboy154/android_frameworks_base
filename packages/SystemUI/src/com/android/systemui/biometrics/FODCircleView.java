@@ -29,8 +29,6 @@ import android.graphics.Paint;
 import android.graphics.drawable.AnimationDrawable;
 import android.graphics.PixelFormat;
 import android.graphics.Point;
-import android.hardware.biometrics.BiometricSourceType;
-import android.net.Uri;
 import android.os.Handler;
 import android.os.UserHandle;
 import android.os.Looper;
@@ -67,8 +65,7 @@ import java.util.NoSuchElementException;
 import java.util.Timer;
 import java.util.TimerTask;
 
-public class FODCircleView extends ImageView{
-    private static final String DOZE_INTENT = "com.android.systemui.doze.pulse";
+public class FODCircleView extends ImageView {
     private final int mPositionX;
     private final int mPositionY;
     private final int mSize;
@@ -90,19 +87,8 @@ public class FODCircleView extends ImageView{
     private int mDreamingOffsetY;
 
     private boolean mIsBouncer;
-    private boolean mIsBiometricRunning;
-    private boolean mIsCircleShowing;
     private boolean mIsDreaming;
-    private boolean mIsKeyguard;
-    private boolean mTouchedOutside;
-
-    private boolean mDozeEnabled;
-    private boolean mFodGestureEnable;
-    private boolean mPressPending;
-    private boolean mScreenTurnedOn;
-
-    private PowerManager mPowerManager;
-    private PowerManager.WakeLock mWakeLock;
+    private boolean mIsCircleShowing;
 
     private Handler mHandler;
 
@@ -157,34 +143,9 @@ public class FODCircleView extends ImageView{
 
     private KeyguardUpdateMonitorCallback mMonitorCallback = new KeyguardUpdateMonitorCallback() {
         @Override
-        public void onBiometricAuthenticated(int userId, BiometricSourceType biometricSourceType,
-                boolean isStrongBiometric) {
-            // We assume that if biometricSourceType matches Fingerprint it will be
-            // handled here, so we hide only when other biometric types authenticate
-            if (biometricSourceType != BiometricSourceType.FINGERPRINT) {
-                hide();
-            }
-        }
-
-        @Override
-        public void onBiometricRunningStateChanged(boolean running,
-                BiometricSourceType biometricSourceType) {
-            if (biometricSourceType == BiometricSourceType.FINGERPRINT) {
-                mIsBiometricRunning = running;
-            }
-        }
-
-        @Override
         public void onDreamingStateChanged(boolean dreaming) {
             mIsDreaming = dreaming;
             updateAlpha();
-
-            if (mIsKeyguard && mUpdateMonitor.isFingerprintDetectionRunning()) {
-                show();
-                updateAlpha();
-            } else {
-                hide();
-            }
 
             if (dreaming) {
                 mBurnInProtectionTimer = new Timer();
@@ -192,19 +153,6 @@ public class FODCircleView extends ImageView{
             } else if (mBurnInProtectionTimer != null) {
                 mBurnInProtectionTimer.cancel();
             }
-        }
-
-        @Override
-        public void onKeyguardVisibilityChanged(boolean showing) {
-            mIsKeyguard = showing;
-            updateStyle();
-            if (mIsRecognizingAnimEnabled) {
-                mFODAnimation.setAnimationKeyguard(mIsKeyguard);
-            }
-            if (mFODIcon != null) {
-                mFODIcon.setIsKeyguard(mIsKeyguard);
-            }
-            handlePocketManagerCallback(showing);
         }
 
         @Override
@@ -237,21 +185,8 @@ public class FODCircleView extends ImageView{
 
         @Override
         public void onScreenTurnedOn() {
-            if (!mFodGestureEnable && mUpdateMonitor.isFingerprintDetectionRunning()) {
+            if (mUpdateMonitor.isFingerprintDetectionRunning()) {
                 show();
-            }
-            if (mFodGestureEnable && mPressPending) {
-                mHandler.post(() -> showCircle());
-                mPressPending = false;
-            }
-            mScreenTurnedOn = true;
-        }
-
-        @Override
-        public void onBiometricHelp(int msgId, String helpString,
-                BiometricSourceType biometricSourceType) {
-            if (msgId == -1 && mIsFodAnimationAvailable) { // Auth error
-                mHandler.post(() -> mFODAnimation.hideFODanimation());
             }
         }
     };
@@ -556,7 +491,6 @@ public class FODCircleView extends ImageView{
     }
 
     public void showCircle() {
-        if (mTouchedOutside || (mIsKeyguard && mIsDeviceInPocket)) return;
         mIsCircleShowing = true;
 
         setKeepScreenOn(true);
@@ -596,24 +530,13 @@ public class FODCircleView extends ImageView{
             return;
         }
 
-        if (mUpdateMonitor.getUserCanSkipBouncer(mUpdateMonitor.getCurrentUser())) {
-            // Ignore show calls if user can skip bouncer
-            return;
-        }
-
-        if (mIsKeyguard && !mIsBiometricRunning) {
-            return;
-        }
-
-        mFODIcon.show();
         updatePosition();
 
-        setVisibility(View.VISIBLE);
         dispatchShow();
+        setVisibility(View.VISIBLE);
     }
 
     public void hide() {
-        mFODIcon.hide();
         setVisibility(View.GONE);
         hideCircle();
         dispatchHide();
