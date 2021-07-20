@@ -236,10 +236,4 @@ oneway interface IStatusBar
     void setBlockedGesturalNavigation(boolean blocked);
 
     void killForegroundApp();
-	
-	/**
-     *  Used to show or hide in display fingerprint view.
-     */
-    void showInDisplayFingerprintView();
-    void hideInDisplayFingerprintView();
 }
