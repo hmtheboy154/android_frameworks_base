@@ -189,9 +189,6 @@
 	
 	<!-- Post reset runnable for all clients -->
      <java-symbol type="bool" name="config_fingerprintPostResetRunnableForAllClients" />
-	 
-   <!-- Enable face auth only when swiping security view -->
-    <java-symbol type="bool" name="config_faceAuthOnlyOnSecurityView" />
 	
 	<!-- Smart cutoff temperature -->
     <java-symbol type="integer" name="config_smartCutoffTemperature" />
