@@ -58,7 +58,6 @@ public class LockIcon extends KeyguardAffordanceView {
     private boolean mKeyguardJustShown;
     private boolean mIsFaceUnlock;
     private boolean mPredrawRegistered;
-    private Drawable mFaceScanningAnim;
     private final SparseArray<Drawable> mDrawableCache = new SparseArray<>();
 
     private final OnPreDrawListener mOnPreDrawListener = new OnPreDrawListener() {
@@ -107,7 +106,6 @@ public class LockIcon extends KeyguardAffordanceView {
 
     public LockIcon(Context context, AttributeSet attrs) {
         super(context, attrs);
-        mFaceScanningAnim = getResources().getDrawable(getThemedAnimationResId(SCANNING));
     }
 
     @Override
@@ -171,10 +169,6 @@ public class LockIcon extends KeyguardAffordanceView {
     }
 
     private Drawable getIcon(int newState) {
-        if (newState == STATE_SCANNING_FACE) {
-            return mFaceScanningAnim;
-        }
-
         @LockAnimIndex final int lockAnimIndex =
                 getAnimationIndexForTransition(mOldState, newState, mPulsing, mDozing,
                         mKeyguardJustShown);
