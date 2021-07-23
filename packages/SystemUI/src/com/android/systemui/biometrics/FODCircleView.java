@@ -79,10 +79,7 @@ public class FODCircleView extends ImageView {
     private int mColorBackground;
     private int mDreamingOffsetY;
 
-    private boolean mFading;
     private boolean mIsBouncer;
-    private boolean mIsBiometricRunning;
-    private boolean mIsCircleShowing;
     private boolean mIsDreaming;
     private boolean mIsKeyguard;
     private boolean mTouchedOutside;
@@ -144,34 +141,9 @@ public class FODCircleView extends ImageView {
 
     private KeyguardUpdateMonitorCallback mMonitorCallback = new KeyguardUpdateMonitorCallback() {
         @Override
-        public void onBiometricAuthenticated(int userId, BiometricSourceType biometricSourceType,
-                boolean isStrongBiometric) {
-            // We assume that if biometricSourceType matches Fingerprint it will be
-            // handled here, so we hide only when other biometric types authenticate
-            if (biometricSourceType != BiometricSourceType.FINGERPRINT) {
-                hide();
-            }
-        }
-
-        @Override
-        public void onBiometricRunningStateChanged(boolean running,
-                BiometricSourceType biometricSourceType) {
-            if (biometricSourceType == BiometricSourceType.FINGERPRINT) {
-                mIsBiometricRunning = running;
-            }
-        }
-
-        @Override
         public void onDreamingStateChanged(boolean dreaming) {
             mIsDreaming = dreaming;
             updateAlpha();
-
-            if (mIsKeyguard && mUpdateMonitor.isFingerprintDetectionRunning()) {
-                show();
-                updateAlpha();
-            } else {
-                hide();
-            }
 
             if (dreaming) {
                 mBurnInProtectionTimer = new Timer();
@@ -211,13 +183,6 @@ public class FODCircleView extends ImageView {
         @Override
         public void onScreenTurnedOff() {
             hide();
-        }
-
-        @Override
-        public void onStartedWakingUp() {
-            if (mUpdateMonitor.isFingerprintDetectionRunning()) {
-                show();
-            }
         }
 
         @Override
@@ -404,7 +369,6 @@ public class FODCircleView extends ImageView {
     }
 
     public void dispatchPress() {
-        if (mFading) return;
         IFingerprintInscreen daemon = getFingerprintInScreenDaemon();
         try {
             daemon.onPress();
@@ -480,35 +444,14 @@ public class FODCircleView extends ImageView {
             return;
         }
 
-        if (mUpdateMonitor.getUserCanSkipBouncer(mUpdateMonitor.getCurrentUser())) {
-            // Ignore show calls if user can skip bouncer
-            return;
-        }
-
-        if (mIsKeyguard && !mIsBiometricRunning) {
-            return;
-        }
-
         updatePosition();
 
-        setVisibility(View.VISIBLE);
-        animate().withStartAction(() -> mFading = true)
-                .alpha(mIsDreaming ? 0.5f : 1.0f)
-                .setDuration(FADE_ANIM_DURATION)
-                .withEndAction(() -> mFading = false)
-                .start();
         dispatchShow();
+        setVisibility(View.VISIBLE);
     }
 
     public void hide() {
-        animate().withStartAction(() -> mFading = true)
-                .alpha(0)
-                .setDuration(FADE_ANIM_DURATION)
-                .withEndAction(() -> {
-                    setVisibility(View.GONE);
-                    mFading = false;
-                })
-                .start();
+        setVisibility(View.GONE);
         hideCircle();
         dispatchHide();
     }
