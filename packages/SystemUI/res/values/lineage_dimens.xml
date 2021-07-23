@@ -60,8 +60,6 @@
     <!-- App Lock -->
     <dimen name="applock_icon_dimension">54dp</dimen>
 
-    <!-- Biometric Prompt -->
-    <dimen name="biometric_dialog_fod_margin">12dp</dimen>
 
     <!-- Clear all notifications button -->
     <dimen name="dismiss_all_button_elevation">10dp</dimen>

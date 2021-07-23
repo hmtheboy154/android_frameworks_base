@@ -656,9 +656,6 @@ public class AuthContainerView extends LinearLayout
         lp.setFitInsetsTypes(lp.getFitInsetsTypes() & ~WindowInsets.Type.ime());
         lp.setTitle("BiometricPrompt");
         lp.token = windowToken;
-        if (mHasFod) {
-            lp.screenOrientation = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT;
-        }
         return lp;
     }
 }
