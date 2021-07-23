@@ -38,7 +38,6 @@ import android.content.ContentResolver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
-import android.content.pm.PackageManager;
 import android.content.pm.UserInfo;
 import android.hardware.biometrics.BiometricSourceType;
 import android.media.AudioAttributes;
@@ -386,8 +385,6 @@ public class KeyguardViewMediator extends SystemUI implements Dumpable {
     private boolean mWakeAndUnlocking;
     private IKeyguardDrawnCallback mDrawnCallback;
     private CharSequence mCustomMessage;
-
-    private boolean mHasFod;
 
     private final DeviceConfig.OnPropertiesChangedListener mOnPropertiesChangedListener =
             new DeviceConfig.OnPropertiesChangedListener() {
@@ -757,8 +754,6 @@ public class KeyguardViewMediator extends SystemUI implements Dumpable {
                 QuickStepContract.isGesturalMode(navigationModeController.addListener(mode -> {
                     mInGestureNavigationMode = QuickStepContract.isGesturalMode(mode);
                 }));
-        PackageManager packageManager = context.getPackageManager();
-        mHasFod = packageManager.hasSystemFeature(LineageContextConstants.Features.FOD);
     }
 
     public void userActivity() {
@@ -891,9 +886,7 @@ public class KeyguardViewMediator extends SystemUI implements Dumpable {
             // explicitly DO NOT want to call
             // mKeyguardViewControllerLazy.get().setKeyguardGoingAwayState(false)
             // here, since that will mess with the device lock state.
-            if (!mHasFod) {
-                mUpdateMonitor.dispatchKeyguardGoingAway(false);
-            }
+            mUpdateMonitor.dispatchKeyguardGoingAway(false);
 
             // Lock immediately based on setting if secure (user has a pin/pattern/password).
             // This also "locks" the device when not secure to provide easy access to the
